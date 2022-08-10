@@ -1,5 +1,7 @@
 # Moosic
 
+---
+
 ## Date: 8/10/2022 - 8/19/2022
 
 ---
@@ -10,7 +12,7 @@
 
 ### **_Links_**
 
-[LinkedIn](https://www.linkedin.com/in/patrick-knight-5a080755/) | [Github](https://www.github.com/pfknight8)
+[Moosic Backend](https://github.com/Tommy-layy/moosic_backend) | [Trello](https://trello.com/b/t17RUM3i/moosic) | [Deployment]()
 
 ---
 
@@ -22,37 +24,32 @@
 
 ### **_Technologies_**
 
-- Item 1
-- Item 2
-  - Sub-item
-  - Sub-item
+## PERN
 
-1. Item 1
-2. Item 2
+<img alt="PERN" width='450' src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/03/PERN.png" />
 
-- Sub-item
+### Postgresql, Express, React, Node
 
-3. Item 3
+### Deployed with Heroku
 
 ---
 
 ### **_Screenshots_**
 
-![Image](https://i.imgur.com/7u8dkVj.jpeg)
+
+### Something
 
 ---
 
 ### **_Future Updates_**
 
-- [ ] This
-- [ ] Second to This
-- [x] That
-- [x] ~~Consider~~ this also
+- [ ] Start Coding
+- [ ] Link to Backend
 
 ---
 
 ### **_Credits_**
 
-- #### Images: imgur.com (ernestdfiore7)
-- #### Markdown Guide: ia.net
-- #### Markdown Cheatsheet: GitHub
+- #### www.freecodecamp.org for 'PERN' logo.
+-
+-
