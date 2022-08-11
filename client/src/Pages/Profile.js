@@ -1,14 +1,14 @@
 import { useNavigate } from 'react-router-dom'
 
-const Home = () => {
+const Profile = () => {
   //State
   const navigate = useNavigate()
   //Functions
   return (
-    <div id='home'>
-      <p>The home page.</p>
+    <div id='profilePage'>
+      <p>The user's profile page.</p>
     </div>
   )
 }
 
-export default Home
+export default Profile
