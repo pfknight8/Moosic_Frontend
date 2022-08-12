@@ -18,6 +18,7 @@ const SignUp = () => {
   }
   return (
     <div id="signUpPage">
+      <p>Sign up</p>
       <div className="signUp">
         <form onSubmit={handleSubmit}>
           <div>

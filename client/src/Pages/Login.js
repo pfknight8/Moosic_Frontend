@@ -15,6 +15,7 @@ const Login = () => {
   return (
     <div id="loginPage">
       <div className="loginCard">
+        <p>Login</p>
         <form className="username" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="username">Username </label>
