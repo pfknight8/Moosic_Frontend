@@ -21,7 +21,14 @@ a:hover {
 .navBarLinks {
   padding: 17px;
   color: black;
+  background-color: white;
+  height: 1vh;
+  border-radius: 50%;
 }
 .logo {
   height: 23vh;
+}
+.header {
+  background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
+  background-size: cover;
 }
