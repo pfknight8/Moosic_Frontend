@@ -9,7 +9,9 @@ import './App.css';
 
 function App() {
   //State
-  // let navigate = useNavigate()
+  const [songSearchFilters, setSongSearchFilters] = useState({})
+
+  let navigate = useNavigate()
   //Functions
   return (
     <div className="App">
@@ -18,6 +20,12 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={ <Home /> } />
+          <Route
+            path='/searchSongs'
+            element={
+              <SongSearch setSongSearchFilters={setSongSearchFilters} songSearchFilters={songSearchFilters} />
+            }
+          />
         </Routes>
       </main>
     </div>
