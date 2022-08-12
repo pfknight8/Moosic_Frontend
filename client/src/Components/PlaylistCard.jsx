@@ -1,8 +1,15 @@
+import PlaylistDetails from "../Pages/PlaylistDetails"
+
 const PlaylistCard = ({playlist}) => {
   //
   return (
     <div className='playlistCard'>
-      <p>Will need to display info here. Give appropriate classNames/id's for css formatting.</p>
+    <p>User's Playlist Here</p>
+      <div id='userPlaylist'>
+        {playlist?.map((userPlaylist, index) => (
+          <PlaylistDetails userPlaylist={userPlaylist} handleSelect={() => handleSelect(userPlaylist)}/>
+        ))}
+      </div>
     </div>
   )
 }
