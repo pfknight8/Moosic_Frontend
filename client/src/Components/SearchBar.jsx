@@ -3,24 +3,24 @@ const SearchBar = ({ songSearchFilters, setSongSearchFilters }) => {
   //Functions -- Consider moving handleChange functions up; I liked having them here for organization, with the required state variables & functions passed into this component as props.
   const handleFormChange = (e) => {
     let formItem = e.target.value
-    switch(e.target.id) {
+    switch (e.target.id) {
       case 'title':
-        setSongSearchFilters({...songSearchFilters, title: formItem})
+        setSongSearchFilters({ ...songSearchFilters, title: formItem })
         break
-      case 'minRunTime':
-        setSongSearchFilters({...songSearchFilters, minRunTime: formItem})
-        break
-      case 'maxRunTime':
-        setSongSearchFilters({...songSearchFilters, maxRunTime: formItem})
-        break
+      // case 'minRunTime':
+      //   setSongSearchFilters({...songSearchFilters, minRunTime: formItem})
+      //   break
+      // case 'maxRunTime':
+      //   setSongSearchFilters({...songSearchFilters, maxRunTime: formItem})
+      //   break
       case 'artist':
-        setSongSearchFilters({...songSearchFilters, artist: formItem})
+        setSongSearchFilters({ ...songSearchFilters, artist: formItem })
         break
       case 'genre':
-        setSongSearchFilters({...songSearchFilters, genre: formItem})
+        setSongSearchFilters({ ...songSearchFilters, genre: formItem })
         break
       default:
-        alert("Something went egregiously wrong!")
+        alert('Something went egregiously wrong!')
     }
   }
 
@@ -32,25 +32,52 @@ const SearchBar = ({ songSearchFilters, setSongSearchFilters }) => {
     <form onReset={handleFormReset}>
       <div>
         <label htmlFor="title">Title: </label>
-        <input className="searchfield" id="title" onChange={handleFormChange} placeholder="Title"></input>
+        <input
+          className="searchfield"
+          id="title"
+          onChange={handleFormChange}
+          placeholder="Title"
+        ></input>
       </div>
       <div>
         <label htmlFor="minRunTime">Min Time (seconds): </label>
-        <input className="searchfield" id="minRunTime" onChange={handleFormChange} placeholder="Greater Than, as Seconds"></input>
+        <input
+          className="searchfield"
+          id="minRunTime"
+          onChange={handleFormChange}
+          placeholder="Greater Than, as Seconds"
+        ></input>
       </div>
       <div>
         <label htmlFor="maxRunTime">Max Time (seonds): </label>
-        <input className="searchfield" id="maxRunTime" onChange={handleFormChange} placeholder="Less Than, as Seconds"></input>
+        <input
+          className="searchfield"
+          id="maxRunTime"
+          onChange={handleFormChange}
+          placeholder="Less Than, as Seconds"
+        ></input>
       </div>
       <div>
         <label htmlFor="artist">Artist/Band: </label>
-        <input className="searchfield" id="artist" onChange={handleFormChange} placeholder="Artist/Band"></input>
+        <input
+          className="searchfield"
+          id="artist"
+          onChange={handleFormChange}
+          placeholder="Artist/Band"
+        ></input>
       </div>
       <div>
         <label htmlFor="genre">Genre: </label>
-        <input className="searchfield" id="genre" onChange={handleFormChange} placeholder="Genre"></input>
+        <input
+          className="searchfield"
+          id="genre"
+          onChange={handleFormChange}
+          placeholder="Genre"
+        ></input>
       </div>
-      <button type="reset" value="Reset">Reset</button>
+      <button type="reset" value="Reset">
+        Reset
+      </button>
     </form>
   )
 }
