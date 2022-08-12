@@ -7,8 +7,6 @@ const SongCard = ({song, handleSelect}) => {
       </div>
       <div className="info-box">
         <h2>Title: {song.title}</h2>
-        <h3>Artist: {song.artist}</h3>
-        <h4>Length: {song.time} seconds</h4>
       </div>
       <button onClick={handleSelect}>Click for Details</button>
     </div>
