@@ -1,5 +1,5 @@
 {
-  "name": "Moosic_Frontend",
+  "name": "moosic_frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -37,5 +37,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "## Udderly Fantastic!",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pfknight8/Moosic_Frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pfknight8/Moosic_Frontend/issues"
+  },
+  "homepage": "https://github.com/pfknight8/Moosic_Frontend#readme"
 }
