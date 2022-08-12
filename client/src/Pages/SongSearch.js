@@ -8,7 +8,10 @@ const SongSearch = ({ songSearchFilters, setSongSearchFilters }) => {
   //Functions
   return (
     <div id='songSearch'>
-      <SearchBar />
+      <SearchBar
+        songSearchFilters={songSearchFilters}
+        setSongSearchFilters={setSongSearchFilters}
+      />
       <p>The place to look for songs.</p>
       <p>Results to dispay here with a map function, as 'songCards'</p>
     </div>
