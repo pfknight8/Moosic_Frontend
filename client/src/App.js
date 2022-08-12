@@ -1,13 +1,13 @@
-import { Route, Routes } from "react-router-dom"
-import { useNavigate } from "react-router-dom"
-import { useState } from "react";
-import Home from "./Pages/Home";
-import Profile from "./Pages/Profile";
-import SongSearch from "./Pages/SongSearch"
-import NavBar from "./Components/NavBar";
-import SignUp from "./Pages/SignUp";
-import Login from "./Pages/Login";
-import './App.css';
+import { Route, Routes } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import Home from './Pages/Home'
+import Profile from './Pages/Profile'
+import SongSearch from './Pages/SongSearch'
+import NavBar from './Components/NavBar'
+import SignUp from './Pages/SignUp'
+import Login from './Pages/Login'
+import './App.css'
 
 function App() {
   //State
@@ -19,33 +19,26 @@ function App() {
   //Functions
   return (
     <div className="App">
-      <p>Things will go here.</p>
       <NavBar />
       <main>
         <Routes>
-          <Route path='/' element={ <Home /> } />
+          <Route path="/" element={<Home />} />
           <Route
-            path='/searchSongs'
+            path="/searchSongs"
             element={
-              <SongSearch setSongSearchFilters={setSongSearchFilters} songSearchFilters={songSearchFilters} />
+              <SongSearch
+                setSongSearchFilters={setSongSearchFilters}
+                songSearchFilters={songSearchFilters}
+              />
             }
           />
-          <Route
-            path='/profile'
-            element={ <Profile /> }
-          />
-          <Route
-            path='/signUp'
-            element={ <SignUp /> }
-          />
-          <Route
-            path='/userLogin'
-            element={ <Login /> }
-          />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/signUp" element={<SignUp />} />
+          <Route path="/userLogin" element={<Login />} />
         </Routes>
       </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
