@@ -39,7 +39,7 @@ const SearchBar = ({ songSearchFilters, setSongSearchFilters }) => {
           placeholder="Title"
         ></input>
       </div>
-      <div>
+      {/* <div>
         <label htmlFor="minRunTime">Min Time (seconds): </label>
         <input
           className="searchfield"
@@ -56,7 +56,7 @@ const SearchBar = ({ songSearchFilters, setSongSearchFilters }) => {
           onChange={handleFormChange}
           placeholder="Less Than, as Seconds"
         ></input>
-      </div>
+      </div> */}
       <div>
         <label htmlFor="artist">Artist/Band: </label>
         <input
