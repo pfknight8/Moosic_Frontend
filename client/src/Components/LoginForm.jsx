@@ -7,3 +7,5 @@ const LoginForm = () => {
 }
 
 export default LoginForm
+
+// This could hard coded into its page.

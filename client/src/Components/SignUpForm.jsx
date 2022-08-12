@@ -7,3 +7,5 @@ const SignUpForm = () => {
 }
 
 export default SignUpForm
+
+// This could be hard coded into its page instead of being separate.

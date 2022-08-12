@@ -10,7 +10,7 @@ const SongSearch = ({ songSearchFilters, setSongSearchFilters }) => {
     <div id='songSearch'>
       <SearchBar />
       <p>The place to look for songs.</p>
-      <p>Results to dispay here, as 'songCards'</p>
+      <p>Results to dispay here with a map function, as 'songCards'</p>
     </div>
   )
 }
