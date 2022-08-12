@@ -1,4 +1,4 @@
-const PlaylistDetails = ({ userPlaylist }) => {
+const PlaylistDetails = ({ selectedPlaylist, handleSongSelect }) => {
   //State
   //Functions
   return (
