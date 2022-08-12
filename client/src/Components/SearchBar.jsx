@@ -60,3 +60,5 @@ export default SearchBar
 // Will need to parse run times as integers (as seconds) before searching the databse. {Will be done elsewhere, but making this note while thinking of it.}
 
 // How do we make genres be "less specific?" The are many, depending on who you ask, so are Indie Rock, Classic Rock, or W/E Rock all going to come up if a user types in 'rock' or '___rock'? It would be hard to make a selector box with 42 genres in it, so will need a flexible user-typed-in search.
+
+// What?
