@@ -55,7 +55,7 @@ const SearchBar = ({ songSearchFilters, setSongSearchFilters }) => {
   )
 }
 
-export default SearchBar
+export default SearchBargit
 
 // Will need to parse run times as integers (as seconds) before searching the databse. {Will be done elsewhere, but making this note while thinking of it.}
 
