@@ -7,6 +7,7 @@ import SongSearch from './Pages/SongSearch'
 import NavBar from './Components/NavBar'
 import SignUp from './Pages/SignUp'
 import Login from './Pages/Login'
+import Header from './Components/Header'
 import './App.css'
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
   //Functions
   return (
     <div className="App">
-      <NavBar />
+      <Header />
+      {/* <NavBar /> */}
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

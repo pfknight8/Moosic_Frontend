@@ -5,7 +5,8 @@ const Home = () => {
   const navigate = useNavigate()
   //Functions
   return (
-    <div id='home'>
+    <div id="home">
+      <h1 className="title"> Moosic</h1>
       <p>The home page.</p>
     </div>
   )

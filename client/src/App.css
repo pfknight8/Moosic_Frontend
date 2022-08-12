@@ -3,6 +3,25 @@
 }
 
 header {
-  background-image: url('https://cdn.shopify.com/s/files/1/2118/1625/products/000496a-5_2000x2000.png?v=1576892418;');
-  background-size: cover;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.title {
+  color: black;
+  font-size: 66px;
+}
+a:link {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: rgb(37, 190, 214);
+}
+.navBarLinks {
+  padding: 17px;
+  color: black;
+}
+.logo {
+  height: 23vh;
 }
