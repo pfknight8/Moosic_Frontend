@@ -39,7 +39,7 @@ const SearchBar = ({ songSearchFilters, setSongSearchFilters }) => {
         <input className="searchfield" id="minRunTime" onChange={handleFormChange} placeholder="Greater Than, as Seconds"></input>
       </div>
       <div>
-        <label htmlFor="maxRunTime">Max Time (seonds): </label>
+        <label htmlFor="maxRunTime">Max Time (seconds): </label>
         <input className="searchfield" id="maxRunTime" onChange={handleFormChange} placeholder="Less Than, as Seconds"></input>
       </div>
       <div>
@@ -55,7 +55,7 @@ const SearchBar = ({ songSearchFilters, setSongSearchFilters }) => {
   )
 }
 
-export default SearchBargit
+export default SearchBar
 
 // Will need to parse run times as integers (as seconds) before searching the databse. {Will be done elsewhere, but making this note while thinking of it.}
 
