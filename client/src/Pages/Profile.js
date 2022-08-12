@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import PlaylistCard from '../Components/PlaylistCard'
 
-const Profile = ({ playlist, handleSelect }) => {
+const Profile = ({ userPlaylists, handlePlaylistSelect }) => {
   //State
   const navigate = useNavigate()
   //Functions
@@ -12,10 +12,10 @@ const Profile = ({ playlist, handleSelect }) => {
       <div className="playlistCard">
         <p>User's Playlist Here</p>
         <div id="userPlaylist">
-          {playlist?.map((userPlaylist, index) => (
+          {userPlaylists?.map((userPlaylist, index) => (
             <PlaylistCard
               userPlaylist={userPlaylist}
-              handleSelect={() => handleSelect(userPlaylist)}
+              handlePlaylistSelect={() => handlePlaylistSelect(userPlaylist)}
             />
           ))}
         </div>

@@ -6,7 +6,7 @@ import { Link, NavLink } from 'react-router-dom'
 //       <Link className="navBarLinks" to="/">
 //         Home
 //       </Link>
-//       <Link className="navBarLinks" to="/searchSongs">
+//       <Link className="navBarLinks" to="/songs">
 //         Search Songs
 //       </Link>
 //       <Link className="navBarLinks" to="/profile">

@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import SearchBar from '../Components/SearchBar'
 import SongCard from '../Components/SongCard'
 
-const SongSearch = ({ songSearchFilters, setSongSearchFilters, songList }) => {
+const SongSearch = ({ songSearchFilters, setSongSearchFilters, handleSongSelect, songList }) => {
   //State
   const navigate = useNavigate()
   //Functions
