@@ -1,13 +1,16 @@
 import { useNavigate } from 'react-router-dom'
 import SearchBar from '../Components/SearchBar'
+import SongCard from '../Components/SongCard'
 
-const SongSearch = () => {
+const SongSearch = ({ songSearchFilters, setSongSearchFilters }) => {
   //State
   const navigate = useNavigate()
   //Functions
   return (
     <div id='songSearch'>
+      <SearchBar />
       <p>The place to look for songs.</p>
+      <p>Results to dispay here, as 'songCards'</p>
     </div>
   )
 }
