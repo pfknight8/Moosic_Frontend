@@ -5,11 +5,15 @@ import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
 import SongSearch from "./Pages/SongSearch"
 import NavBar from "./Components/NavBar";
+import SignUp from "./Pages/SignUp";
+import Login from "./Pages/Login";
 import './App.css';
 
 function App() {
   //State
   const [songSearchFilters, setSongSearchFilters] = useState({})
+  const [authenticated, toggleAuthenticated] = useState(false)
+  const [user, setUser] = useState(null)
 
   let navigate = useNavigate()
   //Functions
@@ -25,6 +29,18 @@ function App() {
             element={
               <SongSearch setSongSearchFilters={setSongSearchFilters} songSearchFilters={songSearchFilters} />
             }
+          />
+          <Route
+            path='/profile'
+            element={ <Profile /> }
+          />
+          <Route
+            path='/signUp'
+            element={ <SignUp /> }
+          />
+          <Route
+            path='/userLogin'
+            element={ <Login /> }
           />
         </Routes>
       </main>

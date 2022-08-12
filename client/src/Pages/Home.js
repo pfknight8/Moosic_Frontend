@@ -12,3 +12,5 @@ const Home = () => {
 }
 
 export default Home
+
+//Can toggle different 'home pages' where one displays telling them to login or make an account, and another page that welcomes users back after they sign in.
