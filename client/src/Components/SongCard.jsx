@@ -1,8 +1,16 @@
-const SongCard = ({song}) => {
+const SongCard = ({song, handleSelect}) => {
   //
   return (
     <div className={`songCard ${song.genre}Card`}>
-      <p>Will need to display info here. Give appropriate classNames/id's for css formatting.</p>
+      <div className="img-content">
+        {song.image ? <img className="songCardImg" src={song.image} alt={song.title} /> : null}
+      </div>
+      <div className="info-box">
+        <h2>Title: {song.title}</h2>
+        <h3>Artist: {song.artist}</h3>
+        <h4>Length: {song.time} seconds</h4>
+      </div>
+      <button onClick={handleSelect}>Click for Details</button>
     </div>
   )
 }
