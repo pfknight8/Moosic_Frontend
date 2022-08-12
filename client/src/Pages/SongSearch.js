@@ -6,9 +6,13 @@ const SongSearch = ({ songSearchFilters, setSongSearchFilters, songList }) => {
   //State
   const navigate = useNavigate()
   //Functions
-  const handleSelect = () => {
+  const handleSelect = (song) => {
     //may move up a level.
+    // for testing:
     alert("Selected a song!")
+    // Real:
+    // setSelectedSong(song)
+    // navigate( to the url for the the song details page )
   }
   //
   return (
