@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Home from './Pages/Home'
 import Profile from './Pages/Profile'
 import SongSearch from './Pages/SongSearch'
@@ -10,6 +10,7 @@ import NavBar from './Components/NavBar'
 import SignUp from './Pages/SignUp'
 import Login from './Pages/Login'
 import Header from './Components/Header'
+import { CheckLogin } from './services/Auth'
 import './App.css'
 
 function App() {
@@ -33,7 +34,22 @@ function App() {
     setSelectedPlaylist(playlist)
     navigate(`/profile/playlist/${playlist.id}`)
   }
-
+  const checkToken = async () => {
+    const user = await CheckLogin()
+    setUser(user)
+    toggleAuthenticated(true)
+  }
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token) {
+      checkToken()
+    }
+  }, [])
+  const LogOut = () => {
+    setUser(null)
+    toggleAuthenticated(false)
+    localStorage.clear()
+  }
   return (
     <div className="App">
       <Header />
@@ -52,11 +68,30 @@ function App() {
               />
             }
           />
-          <Route path="/profile" element={<Profile userPlaylists={userPlaylists} handlePlaylistSelect={handlePlaylistSelect} />} />
+          <Route
+            path="/profile"
+            element={
+              <Profile
+                userPlaylists={userPlaylists}
+                handlePlaylistSelect={handlePlaylistSelect}
+              />
+            }
+          />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/userLogin" element={<Login />} />
-          <Route path="/songs/:song_id" element={<SongDetails selectedSong={selectedSong} /> } />
-          <Route path="/profile/playlist/:playlist_id" element={<PlaylistDetails selectedPlaylist={selectedPlaylist} handleSongSelect={handleSongSelect} />} />
+          <Route
+            path="/songs/:song_id"
+            element={<SongDetails selectedSong={selectedSong} />}
+          />
+          <Route
+            path="/profile/playlist/:playlist_id"
+            element={
+              <PlaylistDetails
+                selectedPlaylist={selectedPlaylist}
+                handleSongSelect={handleSongSelect}
+              />
+            }
+          />
         </Routes>
       </main>
     </div>

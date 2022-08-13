@@ -1,38 +1,51 @@
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+import { SignUpUser } from '../services/Auth'
+
 const SignUp = () => {
   const [formValues, setFormValues] = useState({
-    name: '',
+    username: '',
     email: '',
     password: '',
     confirmPassword: ''
   })
   const navigate = useNavigate()
   const handleChange = (e) => {
-    setFormValues({ ...formValues, [e.target.name]: e.target.value })
+    setFormValues({ ...formValues, [e.target.username]: e.target.value })
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    await SignUpUser({
+      username: formValues.username,
+      email: formValues.email,
+      password: formValues.password
+    })
+    setFormValues({
+      username: '',
+      email: '',
+      password: '',
+      confirmPassword: ''
+    })
     navigate('/userLogin')
   }
   return (
-    <div id="signUpPage">
+    <div className="signUpPage">
       <p>Sign up</p>
       <div className="signUp">
         <form onSubmit={handleSubmit}>
           <div>
-            <label htmlFor="name">Name </label>
+            <label htmlFor="username">Username </label>
             <input
               onChange={handleChange}
-              name="name"
+              name="username"
               type="text"
-              placeholder="Dottie Moo"
-              value={formValues.name}
+              placeholder="DottieMoo3"
+              value={formValues.username}
               required
             />
           </div>
-          <div>
+          <div className="signUp">
             <label htmlFor="email">Email </label>
             <input
               onChange={handleChange}
@@ -43,7 +56,7 @@ const SignUp = () => {
               required
             />
           </div>
-          <div>
+          <div className="signUp">
             <label htmlFor="password">Password </label>
             <input
               onChange={handleChange}
@@ -54,7 +67,7 @@ const SignUp = () => {
               required
             />
           </div>
-          <div>
+          <div className="signUp">
             <label htmlFor="confirmPassword">Confirm Password </label>
             <input
               onChange={handleChange}

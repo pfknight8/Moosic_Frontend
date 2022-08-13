@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 header {
@@ -26,9 +28,24 @@ a:hover {
   border-radius: 50%;
 }
 .logo {
+  padding-left: 10px;
   height: 23vh;
 }
 .header {
   background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
   background-size: cover;
+}
+.signUpPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.loginCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
