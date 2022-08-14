@@ -5,7 +5,7 @@ const SongDetails = ({selectedSong}) => {
     <div id='songDetailsPage'>
       <h1>Title: {selectedSong.title}</h1>
       <div className="img-content">
-        {selectedSong.image ? <img className="songCardImg" src={selectedSong.image} alt={selectedSong.title} /> : null}
+        {selectedSong.image ? <img className="songCardImg" src={selectedSong.image} alt={selectedSong.title} width="400"/> : null}
       </div>
       <div className="info-box">
         <h3>Artist: {selectedSong.artist}</h3>

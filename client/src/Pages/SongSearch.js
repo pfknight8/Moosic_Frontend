@@ -1,20 +1,20 @@
 import { useNavigate } from 'react-router-dom'
+import { useState } from 'react'
 import SearchBar from '../Components/SearchBar'
 import SongCard from '../Components/SongCard'
 
 const SongSearch = ({ songSearchFilters, setSongSearchFilters, handleSongSelect, songList }) => {
   //State
-  const navigate = useNavigate()
+  const [searchResults, setSearchResults] = useState(null)
   //Functions
-  const handleSelect = (song) => {
-    //may move up a level.
-    // for testing:
-    alert("Selected a song!")
-    // Real:
-    // setSelectedSong(song)
-    // navigate( to the url for the the song details page )
+  const handleSearchSubmit = async (e) => {
+    e.preventDefault()
+    // res = axios call using songSearchFilters
+    // setSearchResults to res.'w/e the song collection is'
+    setSearchResults([{id: 0, title: "Test Song", time: 36, artist: "A. A. Ron Balakay", genre: "Heavy Metal", image: "https://i.imgur.com/0YFaa3H.jpeg"}]) // Used to test.
+    // may want to move to App.js, discuss with teammates.
+    // songList may be reused in the playlist card to hold the songs in a similar way (rename appropriately).
   }
-  //
   return (
     <div id='songSearch'>
       <p>The place to look for songs.</p>
@@ -22,12 +22,13 @@ const SongSearch = ({ songSearchFilters, setSongSearchFilters, handleSongSelect,
         <SearchBar
           songSearchFilters={songSearchFilters}
           setSongSearchFilters={setSongSearchFilters}
+          handleSearchSubmit={handleSearchSubmit} 
         />
       </div>
       <h4>Search Results: </h4>
       <div id='songCardHolder'>
-        {songList?.map((song, index) => (
-          <SongCard song={song} handleSelect={() => handleSelect(song)}/>
+        {searchResults?.map((song, index) => (
+          <SongCard key={song.id} song={song} handleSongSelect={() => handleSongSelect(song)}/>
         ))}
       </div>
     </div>

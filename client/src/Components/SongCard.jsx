@@ -1,14 +1,14 @@
-const SongCard = ({song, handleSelect}) => {
+const SongCard = ({song, handleSongSelect}) => {
   //
   return (
     <div className={`songCard ${song.genre}Card`}>
       <div className="img-content">
-        {song.image ? <img className="songCardImg" src={song.image} alt={song.title} /> : null}
+        {song.image ? <img className="songCardImg" src={song.image} alt={song.title} width="300"/> : null}
       </div>
       <div className="info-box">
         <h2>Title: {song.title}</h2>
       </div>
-      <button onClick={handleSelect}>Click for Details</button>
+      <button onClick={handleSongSelect}>Click for Details</button>
     </div>
   )
 }
