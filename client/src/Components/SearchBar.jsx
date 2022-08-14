@@ -1,4 +1,4 @@
-const SearchBar = ({ songSearchFilters, setSongSearchFilters }) => {
+const SearchBar = ({ songSearchFilters, setSongSearchFilters, handleSearchSubmit }) => {
   //State -- There is no state here! State is changed by these features, but by function brought down to this component!
   //Functions -- Consider moving handleChange functions up; I liked having them here for organization, with the required state variables & functions passed into this component as props.
   const handleFormChange = (e) => {
@@ -29,14 +29,15 @@ const SearchBar = ({ songSearchFilters, setSongSearchFilters }) => {
   }
 
   return (
-    <form onReset={handleFormReset}>
+    <form onReset={handleFormReset} onSubmit={handleSearchSubmit}>
       <div>
         <label htmlFor="title">Title: </label>
         <input
           className="searchfield"
           id="title"
           onChange={handleFormChange}
-          placeholder="Title"
+          // placeholder="Title"
+          value={songSearchFilters.title}
         ></input>
       </div>
       {/* <div>
@@ -75,9 +76,8 @@ const SearchBar = ({ songSearchFilters, setSongSearchFilters }) => {
           placeholder="Genre"
         ></input>
       </div>
-      <button type="reset" value="Reset">
-        Reset
-      </button>
+      <button type="reset" value="Reset">Reset</button>
+      <button type="submit">Search</button>
     </form>
   )
 }
@@ -87,3 +87,5 @@ export default SearchBar
 // Will need to parse run times as integers (as seconds) before searching the databse. {Will be done elsewhere, but making this note while thinking of it.}
 
 // How do we make genres be "less specific?" The are many, depending on who you ask, so are Indie Rock, Classic Rock, or W/E Rock all going to come up if a user types in 'rock' or '___rock'? It would be hard to make a selector box with 42 genres in it, so will need a flexible user-typed-in search.
+
+// Will need a submit button with function in order to control axios calls...don't want axios calls to happen on each keystroke.
