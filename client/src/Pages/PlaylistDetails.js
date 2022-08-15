@@ -1,6 +1,6 @@
 import SongCard from "../Components/SongCard"
 
-const PlaylistDetails = ({ selectedPlaylist, handleSongSelect }) => {
+const PlaylistDetails = ({ playlistSongs, selectedPlaylist, handleSongSelect }) => {
   //State
   //Functions
   return (
