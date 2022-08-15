@@ -1,8 +1,9 @@
-const PlaylistCard = ({playlist}) => {
+const PlaylistCard = ({userPlaylist, handlePlaylistSelect}) => {
   //
   return (
     <div className='playlistCard'>
-      <p>Will need to display info here. Give appropriate classNames/id's for css formatting.</p>
+      <h2>{userPlaylist.title}</h2>
+      <button onClick={handlePlaylistSelect}>Click for Details</button>
     </div>
   )
 }
