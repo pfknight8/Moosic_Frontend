@@ -13,6 +13,9 @@ import Header from './Components/Header'
 import { CheckLogin } from './services/Auth'
 import './App.css'
 import Client, { BASE_URL } from './services/api'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import { BASE_URL } from '../globals'
 
 function App() {
   //State
@@ -42,10 +45,24 @@ function App() {
   }
   const handlePlaylistSongs = async (playlist) => {
     let playlist_id = playlist.id
-    let songs = await Client.get(`${BASE_URL}/api/playlist/songs/${playlist_id}`)
+    let songs = await Client.get(
+      `${BASE_URL}/api/playlist/songs/${playlist_id}`
+    )
     setPlaylistSongs(songs)
   }
+  // const SongDetails = (props) => {
+  //   const [songDetails, setSongDetails] = useState({})
 
+  //   useEffect(() => {
+  //     async function getSong() {
+  //       const res = await axios.get(
+  //         `${BASE_URL}/movie/${props.selectedSong}?api_key=${process.env.REACT_APP_DEEZER_KEY}`
+  //       )
+  //       setSongDetails(res.data)
+  //     }
+  //     getSong()
+  //   }, [props.selectedSong])
+  // }
   // Auth functions
   const checkToken = async () => {
     const user = await CheckLogin()
