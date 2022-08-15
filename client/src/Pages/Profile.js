@@ -1,7 +1,11 @@
+import { useEffect } from 'react'
 import PlaylistCard from '../Components/PlaylistCard'
 
-const Profile = ({ user, userPlaylists, handlePlaylistSelect }) => {
+const Profile = ({ user, userPlaylists, handlePlaylistSelect, handleUserPlaylists }) => {
   //State
+  useEffect(() => {
+    handleUserPlaylists()
+  }, [])
   //Functions
   return (
     <div id="profilePage">

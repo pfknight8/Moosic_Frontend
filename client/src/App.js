@@ -35,7 +35,7 @@ function App() {
     setSelectedPlaylist(playlist)
     navigate(`/profile/playlist/${playlist.id}`)
   }
-  const handleUserPlaylist = async (user) => {
+  const handleUserPlaylists = async (user) => {
     let user_id = user.id
     let playlists = await Client.get(`${BASE_URL}/api/playlist/${user_id}`)
     setUserPlaylists(playlists.data)
@@ -88,6 +88,8 @@ function App() {
                 authenticated={authenticated}
                 userPlaylists={userPlaylists}
                 handlePlaylistSelect={handlePlaylistSelect}
+                handleUserPlaylists={handleUserPlaylists}
+                handlePlaylistSongs={handlePlaylistSongs}
               />
             }
           />
