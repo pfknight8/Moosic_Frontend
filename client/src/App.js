@@ -13,7 +13,6 @@ import Header from './Components/Header'
 import { CheckLogin } from './services/Auth'
 import './App.css'
 import Client, { BASE_URL } from './services/api'
-import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
 
