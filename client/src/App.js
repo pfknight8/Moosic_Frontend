@@ -42,9 +42,11 @@ function App() {
   }
   const handlePlaylistSongs = async (playlist) => {
     let playlist_id = playlist.id
-    let songs = await Client.get(`${BASE_URL}/api/playlist`)
+    let songs = await Client.get(`${BASE_URL}/api/playlist/songs/${playlist_id}`)
+    setPlaylistSongs(songs)
   }
 
+  // Auth functions
   const checkToken = async () => {
     const user = await CheckLogin()
     setUser(user)
