@@ -22,7 +22,7 @@ function App() {
   const [selectedSong, setSelectedSong] = useState(null)
   const [selectedPlaylist, setSelectedPlaylist] = useState(null)
   const [userPlaylists, setUserPlaylists] = useState(null)
-  const [playlistSongs, setPlaylistSongs] = useState(null)
+  // const [playlistSongs, setPlaylistSongs] = useState(null)
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
 
@@ -33,29 +33,29 @@ function App() {
     navigate(`/songs/${song.id}`)
   }
 
-  const handlePlaylistSelect = async (playlist) => {
-    await setSelectedPlaylist(playlist)
-    setPlaylistSongs(selectedPlaylist.songs)
-    // const populateSongs = async (selectedPlaylist) => {
-    //   let songsFromPL = await Client.get(`${BASE_URL}/api/playlist/songs/${selectedPlaylist.id}`)
-    //   console.log(songsFromPL.data)
-    //   setPlaylistSongs(songsFromPL.data)
-    // }
-    // await populateSongs(selectedPlaylist)
+  const handlePlaylistSelect = (playlist) => {
+    setSelectedPlaylist(playlist)
     navigate(`/profile/playlist/${playlist.id}`)
+    // const populateSongs = async (selectedPlaylist) => {
+      //   let songsFromPL = await Client.get(`${BASE_URL}/api/playlist/songs/${selectedPlaylist.id}`)
+      //   console.log(songsFromPL.data)
+      //   setPlaylistSongs(songsFromPL.data)
+      // }
+      // await populateSongs(selectedPlaylist)
   }
   const handleUserPlaylists = async (user) => {
     let user_id = user.id
     let playlists = await Client.get(`${BASE_URL}/api/playlist/${user_id}`)
     setUserPlaylists(playlists.data)
   }
-  const handlePlaylistSongs = async (playlist) => {
-    let playlist_id = playlist.id
-    let songs = await Client.get(
-      `${BASE_URL}/api/playlist/songs/${playlist_id}`
-    )
-    setPlaylistSongs(songs)
-  }
+  // const handlePlaylistSongs = async (playlist) => {
+  //   let playlist_id = playlist.id
+  //   let songs = await Client.get(
+  //     `${BASE_URL}/api/playlist/songs/${playlist_id}`
+  //   )
+  //   setPlaylistSongs(songs)
+  // }
+
   // const SongDetails = (props) => {
   //   const [songDetails, setSongDetails] = useState({})
 
@@ -112,7 +112,7 @@ function App() {
                 userPlaylists={userPlaylists}
                 handlePlaylistSelect={handlePlaylistSelect}
                 handleUserPlaylists={handleUserPlaylists}
-                handlePlaylistSongs={handlePlaylistSongs}
+                // handlePlaylistSongs={handlePlaylistSongs}
               />
             }
           />
@@ -142,7 +142,7 @@ function App() {
               <PlaylistDetails
                 selectedPlaylist={selectedPlaylist}
                 handleSongSelect={handleSongSelect}
-                playlistSongs={playlistSongs}
+                setSelectedPlaylist={setSelectedPlaylist}
                 user={user}
                 authenticated={authenticated}
               />
