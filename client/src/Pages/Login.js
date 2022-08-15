@@ -20,11 +20,12 @@ const Login = ({ setUser, toggleAuthenticated }) => {
   }
   return (
     <div className="loginCard">
-      <p>Login</p>
-      <form className="username" onSubmit={handleSubmit}>
-        <div>
+      <p className="loginHeader">Login</p>
+      <form onSubmit={handleSubmit}>
+        <div className="loginField">
           <label htmlFor="username">Username </label>
           <input
+            className="loginField"
             onChange={handleChange}
             type="text"
             name="username"
@@ -33,9 +34,10 @@ const Login = ({ setUser, toggleAuthenticated }) => {
             required
           />
         </div>
-        <div>
+        <div className="loginField">
           <label htmlFor="password">Password </label>
           <input
+            className="loginField"
             onChange={handleChange}
             type="password"
             name="password"
@@ -44,12 +46,15 @@ const Login = ({ setUser, toggleAuthenticated }) => {
             required
           />
         </div>
-        <button
-          disabled={!formValues.username || !formValues.password}
-          type="submit"
-        >
-          Login
-        </button>
+        <div>
+          <button
+            className="buttonz"
+            disabled={!formValues.username || !formValues.password}
+            type="submit"
+          >
+            Login
+          </button>
+        </div>
       </form>
     </div>
   )

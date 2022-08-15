@@ -3,7 +3,6 @@
   width: 100vw;
   height: 100vh;
 }
-
 header {
   margin-top: 10px;
   display: flex;
@@ -35,17 +34,101 @@ a:hover {
   background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
   background-size: cover;
 }
-.signUpPage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
 .loginCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: 88px;
+  border: solid black 5px;
+  width: 36vw;
+  height: 19vw;
+  background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
+}
+.loginField {
+  color: rgb(37, 190, 214);
+  text-align: right;
+  background-color: white;
+  font-size: 27px;
+}
+.loginHeader {
+  font-size: 39px;
+  background-color: white;
+  border: black solid 1px;
+  width: 30vw;
+  color: rgb(37, 190, 214);
+}
+.signUpPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: 88px;
+  border: solid black 5px;
+  width: 44vw;
+  height: 23vw;
+  background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
+}
+.signUpField {
+  color: rgb(37, 190, 214);
+  text-align: right;
+  background-color: white;
+  font-size: 27px;
+}
+.signUpHeader {
+  font-size: 39px;
+  background-color: white;
+  border: black solid 1px;
+  width: 36vw;
+  color: rgb(37, 190, 214);
+}
+.searchCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: 88px;
+  border: solid black 5px;
+  width: 44vw;
+  height: 23vw;
+  background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
+}
+.searchField {
+  color: rgb(37, 190, 214);
+  text-align: right;
+  background-color: white;
+  font-size: 32px;
+}
+.searchHeader {
+  font-size: 39px;
+  background-color: white;
+  border: black solid 1px;
+  width: 36vw;
+  color: rgb(37, 190, 214);
+}
+.buttonz:hover {
+  text-decoration: none;
+  background-color: rgb(37, 190, 214);
+}
+
+.buttonz {
+  font-size: 17px;
+  margin-top: 11px;
+}
+.buttonZ:hover {
+  text-decoration: none;
+  background-color: rgb(201, 138, 216);
+}
+.buttonZ {
+  font-size: 17px;
+  margin-top: 11px;
 }
