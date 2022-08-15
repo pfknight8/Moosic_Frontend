@@ -110,10 +110,24 @@ function App() {
             }
           />
           <Route path="/signUp" element={<SignUp />} />
-          <Route path="/userLogin" element={<Login />} />
+          <Route
+            path="/userLogin"
+            element={
+              <Login
+                setUser={setUser}
+                toggleAuthenticated={toggleAuthenticated}
+              />
+            }
+          />
           <Route
             path="/songs/:song_id"
-            element={<SongDetails selectedSong={selectedSong} />}
+            element={
+              <SongDetails 
+                selectedSong={selectedSong}
+                user={user}
+                authenticated={authenticated}
+              />
+            }
           />
           <Route
             path="/profile/playlist/:playlist_id"
@@ -122,6 +136,8 @@ function App() {
                 selectedPlaylist={selectedPlaylist}
                 handleSongSelect={handleSongSelect}
                 playlistSongs={playlistSongs}
+                user={user}
+                authenticated={authenticated}
               />
             }
           />

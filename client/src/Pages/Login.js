@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { LoginUser } from '../services/Auth'
+
 const Login = ({ setUser, toggleAuthenticated }) => {
   const [formValues, setFormValues] = useState({ username: '', password: '' })
   const navigate = useNavigate()
@@ -25,8 +26,8 @@ const Login = ({ setUser, toggleAuthenticated }) => {
           <label htmlFor="username">Username </label>
           <input
             onChange={handleChange}
+            type="text"
             name="username"
-            type="username"
             placeholder="username"
             value={formValues.username}
             required
