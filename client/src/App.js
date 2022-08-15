@@ -33,8 +33,15 @@ function App() {
     navigate(`/songs/${song.id}`)
   }
 
-  const handlePlaylistSelect = (playlist) => {
-    setSelectedPlaylist(playlist)
+  const handlePlaylistSelect = async (playlist) => {
+    await setSelectedPlaylist(playlist)
+    setPlaylistSongs(selectedPlaylist.songs)
+    // const populateSongs = async (selectedPlaylist) => {
+    //   let songsFromPL = await Client.get(`${BASE_URL}/api/playlist/songs/${selectedPlaylist.id}`)
+    //   console.log(songsFromPL.data)
+    //   setPlaylistSongs(songsFromPL.data)
+    // }
+    // await populateSongs(selectedPlaylist)
     navigate(`/profile/playlist/${playlist.id}`)
   }
   const handleUserPlaylists = async (user) => {
