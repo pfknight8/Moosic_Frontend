@@ -1,6 +1,6 @@
 import SongCard from "../Components/SongCard"
 
-const PlaylistDetails = ({ playlistSongs, selectedPlaylist, handleSongSelect }) => {
+const PlaylistDetails = ({ playlistSongs, handleSongSelect, user, authenticated }) => {
   //State
   //Functions
   return (
@@ -8,7 +8,7 @@ const PlaylistDetails = ({ playlistSongs, selectedPlaylist, handleSongSelect }) 
       <p>A playlist's detail page.</p>
       <p>Playlist will display songs as song cards.</p>
       <div id="songCardHolder">
-        {selectedPlaylist?.map((song, index) => (
+        {playlistSongs?.map((song, index) => (
           <SongCard song={song} handleSongSelect={() => handleSongSelect(song)} />
         ))}
       </div>

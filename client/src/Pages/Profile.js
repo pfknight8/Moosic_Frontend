@@ -1,13 +1,15 @@
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import PlaylistCard from '../Components/PlaylistCard'
 
-const Profile = ({ user, userPlaylists, handlePlaylistSelect, handleUserPlaylists }) => {
+const Profile = ({ user, authenticated, userPlaylists, handlePlaylistSelect, handleUserPlaylists }) => {
   //State
+  const navigate = useNavigate()
   useEffect(() => {
-    handleUserPlaylists()
+    if (authenticated) {handleUserPlaylists(user)}
   }, [])
   //Functions
-  return (
+  return ( (user && authenticated) ? (
     <div id="profilePage">
       <p>The user's profile page.</p>
       <p>Display user information here directly.</p>
@@ -36,6 +38,13 @@ const Profile = ({ user, userPlaylists, handlePlaylistSelect, handleUserPlaylist
         </div>
       </div>
     </div>
+    ) : (
+      <div className='protectedContent'>
+        <h3>Wait, who are you?!</h3>
+        <h4>You must be signed in to view this content!</h4>
+        <button onClick={() => navigate('/userLogin')}>Sign in</button>
+      </div>
+    )
   )
 }
 
