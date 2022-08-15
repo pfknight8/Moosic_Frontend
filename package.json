@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/pfknight8/Moosic_Frontend/issues"
   },
-  "homepage": "https://github.com/pfknight8/Moosic_Frontend#readme"
+  "homepage": "https://github.com/pfknight8/Moosic_Frontend#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
 }
