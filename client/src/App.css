@@ -49,17 +49,18 @@ a:hover {
   background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
 }
 .loginField {
-  color: rgb(37, 190, 214);
+  color: rgb(55, 114, 223);
   text-align: right;
   background-color: white;
   font-size: 27px;
+  font-weight: 500;
 }
 .loginHeader {
   font-size: 39px;
   background-color: white;
   border: black solid 1px;
   width: 30vw;
-  color: rgb(37, 190, 214);
+  color: rgb(55, 114, 223);
 }
 .signUpPage {
   display: flex;
@@ -72,21 +73,22 @@ a:hover {
   margin-top: 88px;
   border: solid black 5px;
   width: 44vw;
-  height: 23vw;
+  height: 25vw;
   background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
 }
 .signUpField {
-  color: rgb(37, 190, 214);
+  color: rgb(55, 114, 223);
   text-align: right;
   background-color: white;
   font-size: 27px;
+  font-weight: 500;
 }
 .signUpHeader {
   font-size: 39px;
   background-color: white;
   border: black solid 1px;
   width: 36vw;
-  color: rgb(37, 190, 214);
+  color: rgb(55, 114, 223);
 }
 .searchCard {
   display: flex;
@@ -103,17 +105,18 @@ a:hover {
   background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
 }
 .searchField {
-  color: rgb(37, 190, 214);
+  color: rgb(55, 114, 223);
   text-align: right;
   background-color: white;
   font-size: 32px;
+  font-weight: 500;
 }
 .searchHeader {
   font-size: 39px;
   background-color: white;
   border: black solid 1px;
   width: 36vw;
-  color: rgb(37, 190, 214);
+  color: rgb(55, 114, 223);
 }
 .buttonz:hover {
   text-decoration: none;
@@ -131,4 +134,15 @@ a:hover {
 .buttonZ {
   font-size: 17px;
   margin-top: 11px;
+}
+.searchResults {
+  font-size: 30px;
+}
+.bottomQ {
+  background-color: white;
+  font-size: 25px;
+  color: rgb(27, 44, 157);
+}
+.here {
+  color: green;
 }

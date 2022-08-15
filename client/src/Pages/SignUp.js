@@ -108,6 +108,12 @@ const SignUp = () => {
           <button className="buttonZ" type="reset">
             Reset Form
           </button>
+          <p className="bottomQ">
+            Have an account already? Login in{' '}
+            <a className="here" href="/userLogin">
+              here.
+            </a>
+          </p>
         </div>
       </form>
     </div>

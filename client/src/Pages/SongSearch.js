@@ -34,7 +34,7 @@ const SongSearch = ({
           handleSearchSubmit={handleSearchSubmit}
         />
       </div>
-      <h4>Search Results: </h4>
+      <h4 className="searchResults">Search Results: </h4>
       <div id="songCardHolder">
         {searchResults?.map((song, index) => (
           <SongCard
