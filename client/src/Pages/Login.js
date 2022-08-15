@@ -54,6 +54,12 @@ const Login = ({ setUser, toggleAuthenticated }) => {
           >
             Login
           </button>
+          <p className="bottomQ">
+            Don't have an account? Sign up{' '}
+            <a className="here" href="/signUp">
+              here.
+            </a>
+          </p>
         </div>
       </form>
     </div>
