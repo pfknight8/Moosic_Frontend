@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import PlaylistCard from '../Components/PlaylistCard'
 
-const Profile = ({ userPlaylists, handlePlaylistSelect }) => {
+const Profile = ({ user, userPlaylists, handlePlaylistSelect }) => {
   //State
   const navigate = useNavigate()
   //Functions

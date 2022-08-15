@@ -5,7 +5,7 @@ import SongCard from '../Components/SongCard'
 import { BASE_URL } from '../services/api'
 import Client from '../services/api'
 
-const SongSearch = ({ songSearchFilters, setSongSearchFilters, handleSongSelect, songList }) => {
+const SongSearch = ({ songSearchFilters, setSongSearchFilters, handleSongSelect }) => {
   //State
   const [searchResults, setSearchResults] = useState(null)
   //Functions
