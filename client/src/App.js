@@ -12,6 +12,7 @@ import Login from './Pages/Login'
 import Header from './Components/Header'
 import { CheckLogin } from './services/Auth'
 import './App.css'
+import Client, { BASE_URL } from './services/api'
 
 function App() {
   //State
@@ -19,7 +20,7 @@ function App() {
   const [selectedSong, setSelectedSong] = useState(null)
   const [selectedPlaylist, setSelectedPlaylist] = useState(null)
   const [userPlaylists, setUserPlaylists] = useState(null)
-  const [songList, setSongList] = useState(null)
+  const [playlistSongs, setPlaylistSongs] = useState(null)
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
 
@@ -34,6 +35,16 @@ function App() {
     setSelectedPlaylist(playlist)
     navigate(`/profile/playlist/${playlist.id}`)
   }
+  const handleUserPlaylist = async (user) => {
+    let user_id = user.id
+    let playlists = await Client.get(`${BASE_URL}/api/playlist/${user_id}`)
+    setUserPlaylists(playlists.data)
+  }
+  const handlePlaylistSongs = async (playlist) => {
+    let playlist_id = playlist.id
+    let songs = await Client.get(`${BASE_URL}/api/playlist`)
+  }
+
   const checkToken = async () => {
     const user = await CheckLogin()
     setUser(user)
@@ -64,7 +75,6 @@ function App() {
                 setSongSearchFilters={setSongSearchFilters}
                 songSearchFilters={songSearchFilters}
                 handleSongSelect={handleSongSelect}
-                songList={songList}
               />
             }
           />
@@ -72,6 +82,8 @@ function App() {
             path="/profile"
             element={
               <Profile
+                user={user}
+                authenticated={authenticated}
                 userPlaylists={userPlaylists}
                 handlePlaylistSelect={handlePlaylistSelect}
               />
@@ -89,6 +101,7 @@ function App() {
               <PlaylistDetails
                 selectedPlaylist={selectedPlaylist}
                 handleSongSelect={handleSongSelect}
+                playlistSongs={playlistSongs}
               />
             }
           />
