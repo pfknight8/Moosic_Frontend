@@ -126,6 +126,7 @@ a:hover {
 .buttonz {
   font-size: 17px;
   margin-top: 11px;
+  cursor: pointer;
 }
 .buttonZ:hover {
   text-decoration: none;
@@ -134,6 +135,7 @@ a:hover {
 .buttonZ {
   font-size: 17px;
   margin-top: 11px;
+  cursor: pointer;
 }
 .searchResults {
   font-size: 30px;
