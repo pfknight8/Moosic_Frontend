@@ -30,7 +30,7 @@ const SignUp = () => {
   }
   return (
     <div className="signUpPage">
-      <p>Sign up</p>
+      <p className="signUpHeader">Sign up</p>
       <form onSubmit={handleSubmit} onReset={handleReset}>
         <div className="signUpField">
           {/* <div>
@@ -47,6 +47,7 @@ const SignUp = () => {
           <div>
             <label htmlFor="username">Username </label>
             <input
+              className="signUpField"
               onChange={handleChange}
               name="username"
               type="text"
@@ -58,6 +59,7 @@ const SignUp = () => {
           <div className="signUpField">
             <label htmlFor="email">Email </label>
             <input
+              className="signUpField"
               onChange={handleChange}
               name="email"
               type="email"
@@ -69,6 +71,7 @@ const SignUp = () => {
           <div className="signUpField">
             <label htmlFor="password">Password </label>
             <input
+              className="signUpField"
               onChange={handleChange}
               type="password"
               name="password"
@@ -80,6 +83,7 @@ const SignUp = () => {
           <div className="signUpField">
             <label htmlFor="confirmPassword">Confirm Password </label>
             <input
+              className="signUpField"
               onChange={handleChange}
               type="password"
               name="confirmPassword"
@@ -89,18 +93,21 @@ const SignUp = () => {
             />
           </div>
         </div>
-        <div className='btnHolder'>
+        <div className="btnHolder">
           <button
+            className="buttonz"
             disabled={
               !formValues.email ||
               (!formValues.password &&
                 formValues.confirmPassword === formValues.password)
-              }
-              type="submit"
-              >
+            }
+            type="submit"
+          >
             Sign Up
           </button>
-          <button type="reset">Reset Form</button>
+          <button className="buttonZ" type="reset">
+            Reset Form
+          </button>
         </div>
       </form>
     </div>

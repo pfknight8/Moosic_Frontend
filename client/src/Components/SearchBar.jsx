@@ -1,4 +1,8 @@
-const SearchBar = ({ songSearchFilters, setSongSearchFilters, handleSearchSubmit }) => {
+const SearchBar = ({
+  songSearchFilters,
+  setSongSearchFilters,
+  handleSearchSubmit
+}) => {
   //State -- There is no state here! State is changed by these features, but by function brought down to this component!
   //Functions -- Consider moving handleChange functions up; I liked having them here for organization, with the required state variables & functions passed into this component as props.
   const handleFormChange = (e) => {
@@ -29,18 +33,20 @@ const SearchBar = ({ songSearchFilters, setSongSearchFilters, handleSearchSubmit
   }
 
   return (
-    <form onReset={handleFormReset} onSubmit={handleSearchSubmit}>
-      <div>
-        <label htmlFor="title">Title: </label>
-        <input
-          className="searchfield"
-          id="title"
-          onChange={handleFormChange}
-          // placeholder="Title"
-          value={songSearchFilters.title}
-        ></input>
-      </div>
-      {/* <div>
+    <div className="searchCard">
+      <p className="searchHeader">The place to look for songs.</p>
+      <form onReset={handleFormReset} onSubmit={handleSearchSubmit}>
+        <div className="searchField">
+          <label htmlFor="title">Title: </label>
+          <input
+            className="searchField"
+            id="title"
+            onChange={handleFormChange}
+            // placeholder="Title"
+            value={songSearchFilters.title}
+          ></input>
+        </div>
+        {/* <div>
         <label htmlFor="minRunTime">Min Time (seconds): </label>
         <input
           className="searchfield"
@@ -58,27 +64,32 @@ const SearchBar = ({ songSearchFilters, setSongSearchFilters, handleSearchSubmit
           placeholder="Less Than, as Seconds"
         ></input>
       </div> */}
-      <div>
-        <label htmlFor="artist">Artist/Band: </label>
-        <input
-          className="searchfield"
-          id="artist"
-          onChange={handleFormChange}
-          placeholder="Artist/Band"
-        ></input>
-      </div>
-      <div>
-        <label htmlFor="genre">Genre: </label>
-        <input
-          className="searchfield"
-          id="genre"
-          onChange={handleFormChange}
-          placeholder="Genre"
-        ></input>
-      </div>
-      <button type="reset" value="Reset">Reset</button>
-      <button type="submit">Search</button>
-    </form>
+        <div className="searchField">
+          <label htmlFor="artist">Artist/Band: </label>
+          <input
+            className="searchField"
+            id="artist"
+            onChange={handleFormChange}
+            placeholder="Artist/Band"
+          ></input>
+        </div>
+        <div className="searchField">
+          <label htmlFor="genre">Genre: </label>
+          <input
+            className="searchField"
+            id="genre"
+            onChange={handleFormChange}
+            placeholder="Genre"
+          ></input>
+        </div>
+        <button className="buttonZ" type="reset" value="Reset">
+          Reset
+        </button>
+        <button className="buttonz" type="submit">
+          Search
+        </button>
+      </form>
+    </div>
   )
 }
 
