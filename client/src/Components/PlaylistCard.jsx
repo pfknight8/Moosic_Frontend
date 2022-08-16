@@ -1,5 +1,4 @@
 const PlaylistCard = ({ userPlaylist, handlePlaylistSelect }) => {
-  //
   return (
     <div className="playlistCard">
       <h2>{userPlaylist.title}</h2>
