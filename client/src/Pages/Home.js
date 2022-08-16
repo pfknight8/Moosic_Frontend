@@ -1,9 +1,15 @@
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const Home = () => {
+const Home = ({ setSongSearchFilters, setSelectedSong, setSelectedPlaylist }) => {
   //State
   const navigate = useNavigate()
   //Functions
+  useEffect(() => {
+    setSongSearchFilters({})
+    setSelectedSong(null)
+    setSelectedPlaylist(null)
+  },[])
   return (
     <div id="home">
       <h1 className="title"> Moosic</h1>
