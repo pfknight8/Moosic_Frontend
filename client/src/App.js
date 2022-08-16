@@ -131,8 +131,11 @@ function App() {
             element={
               <SongDetails 
                 selectedSong={selectedSong}
+                setSelectedSong={setSelectedSong}
                 user={user}
                 authenticated={authenticated}
+                songSearchFilters={songSearchFilters}
+                selectedPlaylist={selectedPlaylist}
               />
             }
           />
