@@ -37,11 +37,11 @@ function App() {
     setSelectedPlaylist(playlist)
     navigate(`/profile/playlist/${playlist.id}`)
     // const populateSongs = async (selectedPlaylist) => {
-      //   let songsFromPL = await Client.get(`${BASE_URL}/api/playlist/songs/${selectedPlaylist.id}`)
-      //   console.log(songsFromPL.data)
-      //   setPlaylistSongs(songsFromPL.data)
-      // }
-      // await populateSongs(selectedPlaylist)
+    //   let songsFromPL = await Client.get(`${BASE_URL}/api/playlist/songs/${selectedPlaylist.id}`)
+    //   console.log(songsFromPL.data)
+    //   setPlaylistSongs(songsFromPL.data)
+    // }
+    // await populateSongs(selectedPlaylist)
   }
   const handleUserPlaylists = async (user) => {
     let user_id = user.id
@@ -129,7 +129,7 @@ function App() {
           <Route
             path="/songs/:song_id"
             element={
-              <SongDetails 
+              <SongDetails
                 selectedSong={selectedSong}
                 setSelectedSong={setSelectedSong}
                 user={user}

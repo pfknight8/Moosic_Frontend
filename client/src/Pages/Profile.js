@@ -29,8 +29,8 @@ const Profile = ({
             Wrap buttons in authentication; don't want anyone but the specific
             user to have access to them.
           </p>
-          <button>Update Info</button>
-          <button>Delete Account</button>
+          <button className="buttonz">Update Info</button>
+          <button className="buttonz">Delete Account</button>
         </div>
         <div id="socialFeatures">
           <p>For Stretch goals.</p>
@@ -38,6 +38,7 @@ const Profile = ({
       </section>
       <div className="playlistCard">
         <p>User's Playlist Here</p>
+        <button className="buttonz">Create Playlist</button>
         <div id="userPlaylist">
           {userPlaylists?.map((userPlaylist, index) => (
             <PlaylistCard
