@@ -26,6 +26,11 @@ const SongDetails = ({
     let song_id = selectedSong.id
     let response = await Client.post(`${BASE_URL}/api/playlist/addsong/${playlist_id}/${song_id}`)
     console.log(response.data)
+    if (!response.data.message) {
+      alert(`song added!`)
+    } else {
+      alert(response.data.message)
+    }
   }
 
   let selectOptions;
