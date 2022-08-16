@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import SearchBar from '../Components/SearchBar'
 import SongCard from '../Components/SongCard'
@@ -21,8 +20,7 @@ const SongSearch = ({
     setSearchResults(res.data)
 
     // setSearchResults([{id: 0, title: "Test Song", time: 36, artist: "A. A. Ron Balakay", genre: "Heavy Metal", image: "https://i.imgur.com/0YFaa3H.jpeg"}]) // Used to test.
-    // may want to move to App.js, discuss with teammates.
-    // songList may be reused in the playlist card to hold the songs in a similar way (rename appropriately).
+
   }
   return (
     <div id="songSearch">
