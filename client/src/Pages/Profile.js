@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import PlaylistCard from '../Components/PlaylistCard'
 import UserControls from '../Components/UserControls'
+import { useState } from 'react'
 const Profile = ({
   user,
   authenticated,
@@ -10,6 +11,15 @@ const Profile = ({
   handleUserPlaylists
 }) => {
   //State
+  const [isFormActive, setIsFormActive] = useState(false)
+  const toggleActive = (e) => {
+    setIsFormActive(!isFormActive)
+    if (e.target.innerHTML === 'Edit Account') {
+      e.target.innerHTML = 'Cancel'
+    } else {
+      e.target.innerHTML = 'Edit Account'
+    }
+  }
   const navigate = useNavigate()
   useEffect(() => {
     if (authenticated) {
@@ -29,8 +39,10 @@ const Profile = ({
             Wrap buttons in authentication; don't want anyone but the specific
             user to have access to them.
           </p>
-          <button className="buttonz">Update Info</button>
-          <button className="buttonz">Delete Account</button>
+          {isFormActive ? <UserControls user={user} /> : null}
+          <button className="buttonz" onClick={toggleActive}>
+            Edit Account
+          </button>
         </div>
         <div id="socialFeatures">
           <p>For Stretch goals.</p>
