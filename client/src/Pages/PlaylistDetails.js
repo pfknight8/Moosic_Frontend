@@ -1,7 +1,13 @@
-import SongCard from "../Components/SongCard"
-import { useNavigate } from "react-router-dom"
+import SongCard from '../Components/SongCard'
+import { useNavigate } from 'react-router-dom'
 
-const PlaylistDetails = ({ selectedPlaylist, handleSongSelect, setSelectedPlaylist, user, authenticated }) => {
+const PlaylistDetails = ({
+  selectedPlaylist,
+  handleSongSelect,
+  setSelectedPlaylist,
+  user,
+  authenticated
+}) => {
   //State
   const navigate = useNavigate()
   //Functions
@@ -15,10 +21,16 @@ const PlaylistDetails = ({ selectedPlaylist, handleSongSelect, setSelectedPlayli
       <p>Playlist will display songs as song cards.</p>
       <div id="songCardHolder">
         {selectedPlaylist.songs?.map((song, index) => (
-          <SongCard key={song.id} song={song} handleSongSelect={() => handleSongSelect(song)} />
+          <SongCard
+            key={song.id}
+            song={song}
+            handleSongSelect={() => handleSongSelect(song)}
+          />
         ))}
       </div>
-      <button onClick={handleReturn}>Return to list</button>
+      <button className="buttonz" onClick={handleReturn}>
+        Return to list
+      </button>
     </div>
   )
 }
