@@ -22,7 +22,6 @@ function App() {
   const [selectedSong, setSelectedSong] = useState(null)
   const [selectedPlaylist, setSelectedPlaylist] = useState(null)
   const [userPlaylists, setUserPlaylists] = useState(null)
-  // const [playlistSongs, setPlaylistSongs] = useState(null)
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
 
@@ -92,7 +91,15 @@ function App() {
       {/* <NavBar /> */}
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/"
+            element={
+              <Home
+                setSongSearchFilters={setSongSearchFilters}
+                setSelectedSong={setSelectedSong}
+                setSelectedPlaylist={setSelectedPlaylist}
+              />
+            }
+          />
           <Route
             path="/songs"
             element={
@@ -112,7 +119,6 @@ function App() {
                 userPlaylists={userPlaylists}
                 handlePlaylistSelect={handlePlaylistSelect}
                 handleUserPlaylists={handleUserPlaylists}
-                // handlePlaylistSongs={handlePlaylistSongs}
               />
             }
           />
@@ -134,7 +140,7 @@ function App() {
                 setSelectedSong={setSelectedSong}
                 user={user}
                 authenticated={authenticated}
-                songSearchFilters={songSearchFilters}
+                userPlaylists={userPlaylists}
                 selectedPlaylist={selectedPlaylist}
               />
             }
