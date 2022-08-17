@@ -200,3 +200,7 @@ a:hover {
     flex-direction: column;
   }
 }
+.msg {
+  font-size: 22px;
+  font-weight: bold;
+}

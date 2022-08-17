@@ -31,7 +31,7 @@ const PlaylistDetails = ({
     toggleUpdatePl(false)
     navigate('/profile')
   }
-  
+
   const deletePlaylist = async () => {
     const res = await Client.delete(
       `${BASE_URL}/api/playlist/${selectedPlaylist.id}`
@@ -62,8 +62,6 @@ const PlaylistDetails = ({
       >
         Delete Playlist
       </button>
-      <p>A playlist's detail page.</p>
-      <p>Playlist will display songs as song cards.</p>
       <div className="songCardHolder">
         {selectedPlaylist.songs?.map((song, index) => (
           <SongCard
