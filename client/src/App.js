@@ -111,6 +111,7 @@ function App() {
                 userPlaylists={userPlaylists}
                 handlePlaylistSelect={handlePlaylistSelect}
                 handleUserPlaylists={handleUserPlaylists}
+                LogOut={LogOut}
               />
             }
           />
