@@ -184,3 +184,8 @@ a:hover {
 .playlist {
   margin: 50px;
 }
+.songCardImg {
+  height: 333px;
+  width: 333px;
+  margin: 30px;
+}
