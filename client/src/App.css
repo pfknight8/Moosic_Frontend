@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@340&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 .App {
   text-align: center;
   width: 100vw;
@@ -232,8 +232,9 @@ a:hover {
 }
 .editAccountButton {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   margin-left: 20px;
+  margin-top: 20px;
   cursor: pointer;
   font-size: 17px;
 }

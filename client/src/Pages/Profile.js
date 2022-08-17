@@ -45,12 +45,11 @@ const Profile = ({
     <div id="profilePage">
       <section>
         <div id="userInfo">
-          <h2>{user.username}</h2>
-          {/* <h3>{user.email}</h3> */}
           {isFormActive ? <UserControls user={user} /> : null}
           <button className="editAccountButton" onClick={toggleActive}>
             Edit Account
           </button>
+          <h2>{user.username}</h2>
         </div>
         <div id="socialFeatures"></div>
       </section>
