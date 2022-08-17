@@ -30,20 +30,19 @@ const SongSearch = ({
     }
   }
 
-  axios
-    .request(options)
-    .then(function (response) {
-      console.log(response.data)
-    })
-    .catch(function (error) {
-      console.error(error)
-    })
-
   const handleSearchSubmit = async (e) => {
     e.preventDefault()
-    const res = await Client.get(`${BASE_URL}/api/song`, {
-      params: songSearchFilters
-    })
+    await axios
+      .request(options)
+      .then(function (response) {
+        console.log(response.data)
+      })
+      .catch(function (error) {
+        console.error(error)
+      })
+    // const res = await Client.get(`${BASE_URL}/api/song`, {
+    //   params: songSearchFilters
+    // })
     setSearchResults(res.data)
   }
   return (
