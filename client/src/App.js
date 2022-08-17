@@ -6,14 +6,13 @@ import Profile from './Pages/Profile'
 import SongSearch from './Pages/SongSearch'
 import SongDetails from './Pages/SongDetails'
 import PlaylistDetails from './Pages/PlaylistDetails'
-import NavBar from './Components/NavBar'
 import SignUp from './Pages/SignUp'
 import Login from './Pages/Login'
 import Header from './Components/Header'
 import { CheckLogin } from './services/Auth'
 import './App.css'
 import Client, { BASE_URL } from './services/api'
-import axios from 'axios'
+// import axios from 'axios'
 // import { BASE_URL } from '../globals'
 
 function App() {
@@ -35,27 +34,14 @@ function App() {
   const handlePlaylistSelect = (playlist) => {
     setSelectedPlaylist(playlist)
     navigate(`/profile/playlist/${playlist.id}`)
-    // const populateSongs = async (selectedPlaylist) => {
-    //   let songsFromPL = await Client.get(`${BASE_URL}/api/playlist/songs/${selectedPlaylist.id}`)
-    //   console.log(songsFromPL.data)
-    //   setPlaylistSongs(songsFromPL.data)
-    // }
-    // await populateSongs(selectedPlaylist)
   }
   const handleUserPlaylists = async (user) => {
     let user_id = user.id
     let playlists = await Client.get(`${BASE_URL}/api/playlist/${user_id}`)
     setUserPlaylists(playlists.data)
   }
-  // const handlePlaylistSongs = async (playlist) => {
-  //   let playlist_id = playlist.id
-  //   let songs = await Client.get(
-  //     `${BASE_URL}/api/playlist/songs/${playlist_id}`
-  //   )
-  //   setPlaylistSongs(songs)
-  // }
 
-  // const SongDetails = (props) => {
+  // would you add this here, or in SongDetails.js?
   //   const [songDetails, setSongDetails] = useState({})
 
   //   useEffect(() => {
@@ -67,7 +53,8 @@ function App() {
   //     }
   //     getSong()
   //   }, [props.selectedSong])
-  // }
+  //
+
   // Auth functions
   const checkToken = async () => {
     const user = await CheckLogin()
@@ -82,6 +69,9 @@ function App() {
   }, [])
   const LogOut = () => {
     setUser(null)
+    setUserPlaylists(null)
+    setSelectedSong(null)
+    setSelectedPlaylist(null)
     toggleAuthenticated(false)
     localStorage.clear()
   }
