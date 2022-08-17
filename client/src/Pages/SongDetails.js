@@ -57,8 +57,9 @@ const SongDetails = ({
         <p className="msg">
           You need to{' '}
           <a className="here" href="/userLogin">
-            login!
-          </a>
+            login
+          </a>{' '}
+          to add song to playlist.
         </p>
       </div>
     )
@@ -77,7 +78,7 @@ const SongDetails = ({
 
   return (
     <div id="songDetailsPage">
-      <h1>Title: {selectedSong.title}</h1>
+      <h1>Song: {selectedSong.title}</h1>
       <div className="img-content">
         {selectedSong.image ? (
           <img
@@ -89,8 +90,8 @@ const SongDetails = ({
         ) : null}
       </div>
       <div className="info-box">
-        <h3>Artist: {selectedSong.artist}</h3>
-        <h4>Length: {selectedSong.time} minutes</h4>
+        <h3 className="artist">Artist: {selectedSong.artist}</h3>
+        <h4 className="length">Length: {selectedSong.time} minutes</h4>
       </div>
       <button className="buttonz" onClick={handleBackToSearch}>
         Back to Search

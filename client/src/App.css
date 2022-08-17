@@ -44,8 +44,8 @@ a:hover {
   margin-bottom: auto;
   margin-top: 88px;
   border: solid black 5px;
-  width: 36vw;
-  height: 21vw;
+  width: 39vw;
+  height: 22vw;
   background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
 }
 .loginField {
@@ -187,13 +187,18 @@ a:hover {
   align-items: center;
   margin: 20px;
   border: 2px black solid;
+  background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
+  background-size: cover;
+  color: rgb(55, 114, 223);
 }
 .songCardImg {
   height: 333px;
   width: 333px;
   margin: 30px;
 }
-
+.playlistName {
+  background-color: white;
+}
 @media screen and (max-width: 300px) {
   .songCardHolder {
     display: flex;
@@ -203,4 +208,32 @@ a:hover {
 .msg {
   font-size: 22px;
   font-weight: bold;
+}
+.playlistButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+.song {
+  color: rgb(55, 114, 223);
+}
+.artist {
+  font-size: 27px;
+}
+.length {
+  font-size: 21px;
+}
+.createPlaylistName {
+  height: 20px;
+}
+.editAccountButton {
+  display: flex;
+  justify-content: end;
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 17px;
+}
+.editAccountButton:hover {
+  text-decoration: none;
+  background-color: rgb(201, 138, 216);
 }

@@ -40,7 +40,7 @@ const PlaylistDetails = ({
   }
   return (
     <div id="playlistDetailsPage">
-      <div>
+      <div className="playlistButtons">
         <button className="buttonz" onClick={handleUpdatePlaylist}>
           {updatePl ? 'Cancel' : 'Edit Playlist'}
         </button>
@@ -55,13 +55,13 @@ const PlaylistDetails = ({
             Update Playlist
           </button>
         ) : null}
+        <button
+          className="buttonZ"
+          onClick={() => deletePlaylist(selectedPlaylist.id)}
+        >
+          Delete Playlist
+        </button>
       </div>
-      <button
-        className="buttonZ"
-        onClick={() => deletePlaylist(selectedPlaylist.id)}
-      >
-        Delete Playlist
-      </button>
       <div className="songCardHolder">
         {selectedPlaylist.songs?.map((song, index) => (
           <SongCard

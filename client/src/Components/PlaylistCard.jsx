@@ -1,7 +1,7 @@
 const PlaylistCard = ({ userPlaylist, handlePlaylistSelect }) => {
   return (
     <div className="playlist">
-      <h2>{userPlaylist.title}</h2>
+      <h2 className="playlistName"> {userPlaylist.title} </h2>
       <button className="buttonz" onClick={handlePlaylistSelect}>
         Click for Details
       </button>
