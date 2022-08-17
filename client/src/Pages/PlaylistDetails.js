@@ -1,7 +1,7 @@
 import SongCard from '../Components/SongCard'
 import { useNavigate } from 'react-router-dom'
 import Client, { BASE_URL } from '../services/api'
-
+import { useState } from 'react'
 const PlaylistDetails = ({
   selectedPlaylist,
   handleSongSelect,
@@ -11,9 +11,17 @@ const PlaylistDetails = ({
 }) => {
   //State
   const navigate = useNavigate()
+  const [newPlaylistTitle, setNewPlaylistTitle] = useState(null)
   //Functions
   const handleReturn = () => {
     setSelectedPlaylist(null)
+    navigate('/profile')
+  }
+  const updatePlaylist = async () => {
+    const res = await Client.put(
+      `${BASE_URL}/api/playlist/${selectedPlaylist.id}`,
+      { title: newPlaylistTitle }
+    )
     navigate('/profile')
   }
   const deletePlaylist = async () => {
@@ -24,6 +32,18 @@ const PlaylistDetails = ({
   }
   return (
     <div id="playlistDetailsPage">
+      <button
+        className="buttonz"
+        onClick={() => updatePlaylist(selectedPlaylist.id)}
+      >
+        Update Playlist
+      </button>
+      {updatePlaylist ? (
+        <input
+          placeholder="Playlist Name"
+          onChange={(e) => setNewPlaylistTitle(e.target.value)}
+        />
+      ) : null}
       <button
         className="buttonZ"
         onClick={() => deletePlaylist(selectedPlaylist.id)}

@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import Client, { BASE_URL } from '../services/api'
 import { useParams } from 'react-router-dom'
-
+import { useNavigate } from 'react-router-dom'
 export default function Edit(props) {
   const [email, setEmail] = useState(props.user.email)
   const [username, setUsername] = useState(props.user.username)
@@ -15,7 +15,11 @@ export default function Edit(props) {
       password: password
     })
   }
+  const navigate = useNavigate()
 
+  const handleReturn = () => {
+    navigate('/profile')
+  }
   const deleteAccount = async (user) => {
     const res = await Client.delete(`${BASE_URL}/api/user/${props.user.id}`)
   }
@@ -46,11 +50,11 @@ export default function Edit(props) {
             name="password"
             placeholder="password"
           />
-          <button type="submit" onClick={props.getPassword}>
+          <button className="buttonz" type="submit" onClick={handleReturn}>
             Submit
           </button>
           <button
-            className="buttonz"
+            className="buttonZ"
             onClick={() => deleteAccount(props.user._id)}
           >
             Delete Account
