@@ -20,7 +20,7 @@ const Home = ({
       <p>A music site</p>
       <img
         className="background"
-        src="https://i.pinimg.com/736x/d4/68/b5/d468b54752fbc11b232d90418a827f98.jpg"
+        src="https://media.istockphoto.com/vectors/music-staff-with-music-notes-vector-vector-id475582788?k=20&m=475582788&s=612x612&w=0&h=m9yaXDI69P3sbakTdtXGTB8MEcYlOdYip64BhPvpK5s="
         alt="Background"
       />
     </div>
