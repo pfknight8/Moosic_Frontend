@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@340&display=swap');
 .App {
   text-align: center;
   width: 100vw;
   height: 100vh;
+  font-family: 'Roboto', sans-serif;
 }
 header {
   margin-top: 10px;
@@ -126,6 +128,7 @@ a:hover {
 .buttonz {
   font-size: 17px;
   margin-top: 11px;
+  margin-right: 10px;
   cursor: pointer;
 }
 .buttonZ:hover {
@@ -135,6 +138,7 @@ a:hover {
 .buttonZ {
   font-size: 17px;
   margin-top: 11px;
+  margin-right: 10px;
   cursor: pointer;
 }
 .searchResults {
