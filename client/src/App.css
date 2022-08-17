@@ -176,3 +176,11 @@ a:hover {
 .songCard {
   margin: 30px;
 }
+.playlistCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.playlist {
+  margin: 50px;
+}
