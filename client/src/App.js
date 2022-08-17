@@ -63,8 +63,10 @@ function App() {
   }
   useEffect(() => {
     const token = localStorage.getItem('token')
-    if (token) {
+    if (token && user) {
       checkToken()
+    } else if (token && !user) {
+      localStorage.clear()
     }
   }, [])
   const LogOut = () => {
