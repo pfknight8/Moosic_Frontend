@@ -55,11 +55,10 @@ const SongDetails = ({
     selectOptions = (
       <div className="optDiv">
         <p className="msg">
-          You need to{' '}
           <a className="here" href="/userLogin">
-            login
+            Login
           </a>{' '}
-          to add song to playlist.
+          to add this song to a playlist
         </p>
       </div>
     )
@@ -67,10 +66,11 @@ const SongDetails = ({
     selectOptions = (
       <div className="optDiv">
         <p className="msg">
-          You need to create at least one{' '}
+          Create a{' '}
           <a className="here" href="/profile">
-            playlist!
+            playlist
           </a>
+          to save this song
         </p>
       </div>
     )

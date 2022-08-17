@@ -30,22 +30,11 @@ const SignUp = () => {
   }
   return (
     <div className="signUpPage">
-      <p className="signUpHeader">Sign up</p>
+      <p className="signUpHeader">SIGN UP</p>
       <form onSubmit={handleSubmit} onReset={handleReset}>
         <div className="signUpField">
-          {/* <div>
-            <label htmlFor="name">Name </label>
-            <input
-              onChange={handleChange}
-              name="name"
-              type="text"
-              placeholder="Dottie Moo"
-              value={formValues.name}
-              required
-              />
-          </div> */}
           <div>
-            <label htmlFor="username">Username </label>
+            <label htmlFor="username">USERNAME </label>
             <input
               className="signUpField"
               onChange={handleChange}
@@ -57,7 +46,7 @@ const SignUp = () => {
             />
           </div>
           <div className="signUpField">
-            <label htmlFor="email">Email </label>
+            <label htmlFor="email">EMAIL </label>
             <input
               className="signUpField"
               onChange={handleChange}
@@ -69,7 +58,7 @@ const SignUp = () => {
             />
           </div>
           <div className="signUpField">
-            <label htmlFor="password">Password </label>
+            <label htmlFor="password">PASSWORD </label>
             <input
               className="signUpField"
               onChange={handleChange}
@@ -81,7 +70,7 @@ const SignUp = () => {
             />
           </div>
           <div className="signUpField">
-            <label htmlFor="confirmPassword">Confirm Password </label>
+            <label htmlFor="confirmPassword">CONFIRM PASSWORD </label>
             <input
               className="signUpField"
               onChange={handleChange}
@@ -111,7 +100,7 @@ const SignUp = () => {
           <p className="bottomQ">
             Have an account already? Login{' '}
             <a className="here" href="/userLogin">
-              here.
+              here
             </a>
           </p>
         </div>
