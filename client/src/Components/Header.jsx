@@ -1,6 +1,17 @@
 import { Link } from 'react-router-dom'
 const url = require('../Components/Moosic.png')
-const Header = () => {
+const Header = ({LogOut, user}) => {
+  //
+  let userButtonOpt;
+  if (user) {
+    userButtonOpt = (
+      <Link className='navBarLinks' onClick={LogOut} to="/">Log Out</Link>
+    )
+  } else {
+    userButtonOpt = (
+      <Link className="navBarLinks" to="/userLogin">Login</Link>
+    )
+  }
   return (
     <header className="header">
       <Link to="/">
@@ -19,9 +30,7 @@ const Header = () => {
         <Link className="navBarLinks" to="/signUp">
           Sign Up
         </Link>
-        <Link className="navBarLinks" to="/userLogin">
-          Login
-        </Link>
+        {userButtonOpt}
       </nav>
     </header>
   )
