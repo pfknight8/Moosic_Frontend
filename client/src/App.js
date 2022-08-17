@@ -142,6 +142,7 @@ function App() {
                 authenticated={authenticated}
                 userPlaylists={userPlaylists}
                 selectedPlaylist={selectedPlaylist}
+                setSelectedPlaylist={setSelectedPlaylist}
               />
             }
           />

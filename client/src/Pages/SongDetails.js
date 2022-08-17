@@ -8,7 +8,8 @@ const SongDetails = ({
   user,
   authenticated,
   userPlaylists,
-  selectedPlaylist
+  selectedPlaylist,
+  setSelectedPlaylist
 }) => {
   //State
   const [toPlaylist, setToPlaylist] = useState(null)
@@ -16,6 +17,7 @@ const SongDetails = ({
   //Functions
   const handleBackToSearch = () => {
     setSelectedSong(null)
+    setSelectedPlaylist(null)
     navigate('/songs')
   }
   const handleBackToPlaylist = (PL) => {
