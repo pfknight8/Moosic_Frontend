@@ -50,7 +50,6 @@ const Profile = ({
           <button className="editAccountButton" onClick={toggleActive}>
             Edit Account
           </button>
-          <h2>{user.username}</h2>
         </div>
         <div id="socialFeatures"></div>
       </section>

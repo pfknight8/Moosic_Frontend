@@ -220,6 +220,8 @@ a:hover {
   display: flex;
   justify-content: flex-end;
   margin-right: 10px;
+  font-family: 'Aboreto', cursive;
+  font-weight: bold;
 }
 .song {
   color: black;
@@ -240,15 +242,16 @@ a:hover {
   margin-top: 20px;
   cursor: pointer;
   font-size: 17px;
+  font-family: 'Aboreto', cursive;
+  font-weight: bold;
 }
 .editAccountButton:hover {
   text-decoration: none;
   background-color: rgb(201, 138, 216);
+  font-family: 'Aboreto', cursive;
+  font-weight: bold;
 }
-/* .home {
-  background-image: url('https://i.pinimg.com/736x/d4/68/b5/d468b54752fbc11b232d90418a827f98.jpg');
-  background-size: cover;
-} */
+
 .background {
   width: 70vw;
 }
