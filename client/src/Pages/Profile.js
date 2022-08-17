@@ -10,7 +10,8 @@ const Profile = ({
   authenticated,
   userPlaylists,
   handlePlaylistSelect,
-  handleUserPlaylists
+  handleUserPlaylists,
+  LogOut
 }) => {
   //State
   const [isFormActive, setIsFormActive] = useState(false)
@@ -45,7 +46,7 @@ const Profile = ({
     <div id="profilePage">
       <section>
         <div id="userInfo">
-          {isFormActive ? <UserControls user={user} /> : null}
+          {isFormActive ? <UserControls user={user} LogOut={LogOut}/> : null}
           <button className="editAccountButton" onClick={toggleActive}>
             Edit Account
           </button>
