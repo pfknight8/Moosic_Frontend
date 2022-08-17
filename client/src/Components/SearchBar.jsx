@@ -3,7 +3,6 @@ const SearchBar = ({
   setSongSearchFilters,
   handleSearchSubmit
 }) => {
-  
   const handleFormChange = (e) => {
     let formItem = e.target.value
     switch (e.target.id) {
