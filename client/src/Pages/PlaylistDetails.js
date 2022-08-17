@@ -12,18 +12,10 @@ const PlaylistDetails = ({
 }) => {
   //State
   const navigate = useNavigate()
-  const [isFormActive, setIsFormActive] = useState(false)
   const [updatePl, toggleUpdatePl] = useState(false)
   const [newPlaylistTitle, setNewPlaylistTitle] = useState(null)
   //Functions
-  const toggleActive = (e) => {
-    setIsFormActive(!isFormActive)
-    if (e.target.innerHTML === 'Edit Playlist') {
-      e.target.innerHTML = 'Cancel'
-    } else {
-      e.target.innerHTML = 'Edit Playlist'
-    }
-  }
+
   const handleUpdatePlaylist = () => {
     toggleUpdatePl(!updatePl)
   }
@@ -39,11 +31,7 @@ const PlaylistDetails = ({
     toggleUpdatePl(false)
     navigate('/profile')
   }
-  useEffect(() => {
-    if (authenticated) {
-      handleUpdatePlaylist(user)
-    }
-  }, [updatePl])
+  
   const deletePlaylist = async () => {
     const res = await Client.delete(
       `${BASE_URL}/api/playlist/${selectedPlaylist.id}`
@@ -52,12 +40,6 @@ const PlaylistDetails = ({
   }
   return (
     <div id="playlistDetailsPage">
-      <div>
-        {isFormActive}
-        <button className="buttonz" onClick={toggleActive}>
-          Edit Playlist
-        </button>
-      </div>
       <div>
         <button className="buttonz" onClick={handleUpdatePlaylist}>
           {updatePl ? 'Cancel' : 'Edit Playlist'}
