@@ -109,7 +109,7 @@ const SignUp = () => {
             Reset Form
           </button>
           <p className="bottomQ">
-            Have an account already? Login in{' '}
+            Have an account already? Login{' '}
             <a className="here" href="/userLogin">
               here.
             </a>
