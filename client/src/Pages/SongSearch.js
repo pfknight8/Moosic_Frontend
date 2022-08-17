@@ -20,7 +20,6 @@ const SongSearch = ({
     setSearchResults(res.data)
 
     // setSearchResults([{id: 0, title: "Test Song", time: 36, artist: "A. A. Ron Balakay", genre: "Heavy Metal", image: "https://i.imgur.com/0YFaa3H.jpeg"}]) // Used to test.
-
   }
   return (
     <div id="songSearch">
@@ -33,7 +32,7 @@ const SongSearch = ({
         />
       </div>
       <h4 className="searchResults">Search Results: </h4>
-      <div id="songCardHolder">
+      <div className="songCardHolder">
         {searchResults?.map((song, index) => (
           <SongCard
             key={song.id}

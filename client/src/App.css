@@ -167,3 +167,12 @@ a:hover {
   font-size: 33px;
   color: rgb(55, 114, 223);
 }
+
+.songCardHolder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.songCard {
+  margin: 30px;
+}
