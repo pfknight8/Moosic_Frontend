@@ -1,7 +1,11 @@
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const Home = ({ setSongSearchFilters, setSelectedSong, setSelectedPlaylist }) => {
+const Home = ({
+  setSongSearchFilters,
+  setSelectedSong,
+  setSelectedPlaylist
+}) => {
   //State
   const navigate = useNavigate()
   //Functions
@@ -9,11 +13,11 @@ const Home = ({ setSongSearchFilters, setSelectedSong, setSelectedPlaylist }) =>
     setSongSearchFilters({})
     setSelectedSong(null)
     setSelectedPlaylist(null)
-  },[])
+  }, [])
   return (
     <div id="home">
       <h1 className="title"> Moosic</h1>
-      <p>The home page.</p>
+      <p>A music site.</p>
     </div>
   )
 }
