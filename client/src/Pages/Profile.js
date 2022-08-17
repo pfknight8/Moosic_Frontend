@@ -34,7 +34,7 @@ const Profile = ({
       title: newPlaylistTitle
     })
     toggleCreateNew(false)
-    // navigate('/profile')
+    navigate('/profile')
   }
   useEffect(() => {
     if (authenticated) {
