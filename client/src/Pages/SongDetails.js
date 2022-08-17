@@ -34,7 +34,7 @@ const SongDetails = ({
   }
 
   let selectOptions;
-  if (userPlaylists && userPlaylists.length > 0) {
+  if (user && userPlaylists && userPlaylists.length > 0) {
     selectOptions = (
       <div className="optDiv">
         <h4>Add to a playlist</h4>
