@@ -169,8 +169,8 @@ a:hover {
 }
 
 .songCardHolder {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
 }
 .songCard {
@@ -178,14 +178,25 @@ a:hover {
 }
 .playlistCard {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
 }
 .playlist {
-  margin: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+  border: 2px black solid;
 }
 .songCardImg {
   height: 333px;
   width: 333px;
   margin: 30px;
+}
+
+@media screen and (max-width: 300px) {
+  .songCardHolder {
+    display: flex;
+    flex-direction: column;
+  }
 }

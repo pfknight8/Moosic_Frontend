@@ -64,7 +64,7 @@ const PlaylistDetails = ({
       </button>
       <p>A playlist's detail page.</p>
       <p>Playlist will display songs as song cards.</p>
-      <div id="songCardHolder">
+      <div className="songCardHolder">
         {selectedPlaylist.songs?.map((song, index) => (
           <SongCard
             key={song.id}
