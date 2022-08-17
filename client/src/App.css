@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 .App {
   text-align: center;
   width: 100vw;
   height: 100vh;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Aboreto', cursive;
+  font-weight: bold;
 }
 header {
   margin-top: 10px;
@@ -30,7 +31,7 @@ a:hover {
 }
 .logo {
   padding-left: 10px;
-  height: 23vh;
+  height: 27vh;
 }
 .header {
   background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
@@ -44,14 +45,14 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
-  margin-top: 88px;
+  margin-top: 66px;
   border: solid black 5px;
-  width: 39vw;
-  height: 22vw;
-  background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
+  border-style: double;
+  width: 44vw;
+  height: 27vw;
 }
 .loginField {
-  color: rgb(55, 114, 223);
+  color: black;
   text-align: right;
   background-color: white;
   font-size: 27px;
@@ -60,9 +61,9 @@ a:hover {
 .loginHeader {
   font-size: 39px;
   background-color: white;
-  border: black solid 1px;
+  border: solid black 3px;
   width: 30vw;
-  color: rgb(55, 114, 223);
+  color: black;
 }
 .signUpPage {
   display: flex;
@@ -72,14 +73,14 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
-  margin-top: 88px;
+  margin-top: 66px;
   border: solid black 5px;
-  width: 44vw;
-  height: 25vw;
-  background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
+  border-style: double;
+  width: 47vw;
+  height: 27vw;
 }
 .signUpField {
-  color: rgb(55, 114, 223);
+  color: black;
   text-align: right;
   background-color: white;
   font-size: 27px;
@@ -88,9 +89,9 @@ a:hover {
 .signUpHeader {
   font-size: 39px;
   background-color: white;
-  border: black solid 1px;
+  border: black solid 3px;
   width: 36vw;
-  color: rgb(55, 114, 223);
+  color: black;
 }
 .searchCard {
   display: flex;
@@ -100,14 +101,14 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
-  margin-top: 88px;
+  margin-top: 66px;
   border: solid black 5px;
-  width: 44vw;
-  height: 23vw;
-  background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
+  border-style: double;
+  width: 47vw;
+  height: 47vh;
 }
 .searchField {
-  color: rgb(55, 114, 223);
+  color: black;
   text-align: right;
   background-color: white;
   font-size: 32px;
@@ -116,9 +117,9 @@ a:hover {
 .searchHeader {
   font-size: 39px;
   background-color: white;
-  border: black solid 1px;
+  border: black solid 3px;
   width: 36vw;
-  color: rgb(55, 114, 223);
+  color: black;
 }
 .buttonz:hover {
   text-decoration: none;
@@ -130,6 +131,8 @@ a:hover {
   margin-top: 11px;
   margin-right: 10px;
   cursor: pointer;
+  font-family: 'Aboreto', cursive;
+  font-weight: bold;
 }
 .buttonZ:hover {
   text-decoration: none;
@@ -140,6 +143,8 @@ a:hover {
   margin-top: 11px;
   margin-right: 10px;
   cursor: pointer;
+  font-family: 'Aboreto', cursive;
+  font-weight: bold;
 }
 .searchResults {
   font-size: 30px;
@@ -147,10 +152,10 @@ a:hover {
 .bottomQ {
   background-color: white;
   font-size: 25px;
-  color: rgb(27, 44, 157);
+  color: black;
 }
 .here {
-  color: rgb(19, 167, 19);
+  color: rgb(80, 208, 16);
 }
 .protectedContent {
   display: flex;
@@ -160,16 +165,16 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
-  margin-top: 88px;
+  margin-top: 66px;
   border: solid black 5px;
-  width: 39vw;
-  height: 22vw;
-  background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
+  border-style: double;
+  width: 44vw;
+  height: 27vw;
 }
 .needLogin {
   background-color: white;
   font-size: 33px;
-  color: rgb(55, 114, 223);
+  color: black;
 }
 
 .songCardHolder {
@@ -191,9 +196,7 @@ a:hover {
   align-items: center;
   margin: 20px;
   border: 2px black solid;
-  background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
-  background-size: cover;
-  color: rgb(55, 114, 223);
+  color: black;
 }
 .songCardImg {
   height: 333px;
@@ -219,7 +222,7 @@ a:hover {
   margin-right: 10px;
 }
 .song {
-  color: rgb(55, 114, 223);
+  color: black;
 }
 .artist {
   font-size: 27px;
@@ -241,4 +244,11 @@ a:hover {
 .editAccountButton:hover {
   text-decoration: none;
   background-color: rgb(201, 138, 216);
+}
+/* .home {
+  background-image: url('https://i.pinimg.com/736x/d4/68/b5/d468b54752fbc11b232d90418a827f98.jpg');
+  background-size: cover;
+} */
+.background {
+  width: 70vw;
 }

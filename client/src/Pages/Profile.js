@@ -46,7 +46,7 @@ const Profile = ({
     <div id="profilePage">
       <section>
         <div id="userInfo">
-          {isFormActive ? <UserControls user={user} LogOut={LogOut}/> : null}
+          {isFormActive ? <UserControls user={user} LogOut={LogOut} /> : null}
           <button className="editAccountButton" onClick={toggleActive}>
             Edit Account
           </button>
@@ -87,8 +87,7 @@ const Profile = ({
     </div>
   ) : (
     <div className="protectedContent">
-      <h3 className="needLogin">Wait, who are you?!</h3>
-      <h4 className="needLogin">You must be signed in to view this content!</h4>
+      <h4 className="needLogin">Sign in to create or view playlists</h4>
       <button className="buttonz" onClick={() => navigate('/userLogin')}>
         Sign in
       </button>

@@ -26,10 +26,10 @@ const SearchBar = ({
 
   return (
     <div className="searchCard">
-      <p className="searchHeader">The place to look for songs.</p>
+      <p className="searchHeader">SONG SEARCH</p>
       <form onReset={handleFormReset} onSubmit={handleSearchSubmit}>
         <div className="searchField">
-          <label htmlFor="title">Title: </label>
+          <label htmlFor="title">TITLE: </label>
           <input
             className="searchField"
             id="title"
@@ -38,16 +38,16 @@ const SearchBar = ({
           ></input>
         </div>
         <div className="searchField">
-          <label htmlFor="artist">Artist/Band: </label>
+          <label htmlFor="artist">ARTIST: </label>
           <input
             className="searchField"
             id="artist"
             onChange={handleFormChange}
-            placeholder="Artist/Band"
+            placeholder="Artist"
           ></input>
         </div>
         <div className="searchField">
-          <label htmlFor="genre">Genre: </label>
+          <label htmlFor="genre">GENRE: </label>
           <input
             className="searchField"
             id="genre"

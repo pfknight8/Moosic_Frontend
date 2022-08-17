@@ -20,10 +20,10 @@ const Login = ({ setUser, toggleAuthenticated }) => {
   }
   return (
     <div className="loginCard">
-      <p className="loginHeader">Login</p>
+      <p className="loginHeader">LOGIN</p>
       <form onSubmit={handleSubmit}>
         <div className="loginField">
-          <label htmlFor="username">Username </label>
+          <label htmlFor="username">USERNAME </label>
           <input
             className="loginField"
             onChange={handleChange}
@@ -35,7 +35,7 @@ const Login = ({ setUser, toggleAuthenticated }) => {
           />
         </div>
         <div className="loginField">
-          <label htmlFor="password">Password </label>
+          <label htmlFor="password">PASSWORD </label>
           <input
             className="loginField"
             onChange={handleChange}
@@ -57,7 +57,7 @@ const Login = ({ setUser, toggleAuthenticated }) => {
           <p className="bottomQ">
             Don't have an account? Sign up{' '}
             <a className="here" href="/signUp">
-              here.
+              here
             </a>
           </p>
         </div>
