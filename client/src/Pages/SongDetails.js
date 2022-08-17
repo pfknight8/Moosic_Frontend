@@ -91,7 +91,7 @@ const SongDetails = ({
       </div>
       <div className="info-box">
         <h3 className="artist">Artist: {selectedSong.artist}</h3>
-        <h4 className="length">Length: {selectedSong.time} minutes</h4>
+        <h4 className="length">Length: {selectedSong.time} seconds</h4>
       </div>
       <button className="buttonz" onClick={handleBackToSearch}>
         Back to Search
