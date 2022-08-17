@@ -1,6 +1,6 @@
 const PlaylistCard = ({ userPlaylist, handlePlaylistSelect }) => {
   return (
-    <div className="playlistCard">
+    <div className="playlist">
       <h2>{userPlaylist.title}</h2>
       <button className="buttonz" onClick={handlePlaylistSelect}>
         Click for Details
