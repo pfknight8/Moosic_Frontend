@@ -43,27 +43,18 @@ const Profile = ({
   }, [createNew])
   return user && authenticated ? (
     <div id="profilePage">
-      <p>The user's profile page.</p>
-      <p>Display user information here directly.</p>
       <section>
         <div id="userInfo">
           <h2>{user.username}</h2>
           <h3>{user.email}</h3>
-          <p>
-            Wrap buttons in authentication; don't want anyone but the specific
-            user to have access to them.
-          </p>
           {isFormActive ? <UserControls user={user} /> : null}
           <button className="buttonz" onClick={toggleActive}>
             Edit Account
           </button>
         </div>
-        <div id="socialFeatures">
-          <p>For Stretch goals.</p>
-        </div>
+        <div id="socialFeatures"></div>
       </section>
       <div id="userPlaylist">
-        <p>User's Playlist Here</p>
         <button
           className="buttonz"
           id="createPL"
