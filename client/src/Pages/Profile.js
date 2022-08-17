@@ -4,6 +4,7 @@ import PlaylistCard from '../Components/PlaylistCard'
 import UserControls from '../Components/UserControls'
 import { useState } from 'react'
 import Client, { BASE_URL } from '../services/api'
+
 const Profile = ({
   user,
   authenticated,
@@ -29,7 +30,9 @@ const Profile = ({
     toggleCreateNew(!createNew)
   }
   const submitNewPlaylist = async () => {
-    await Client.post(`${BASE_URL}/api/playlist/${user.id}`, {title: newPlaylistTitle})
+    await Client.post(`${BASE_URL}/api/playlist/${user.id}`, {
+      title: newPlaylistTitle
+    })
     toggleCreateNew(false)
     // navigate('/profile')
   }
@@ -61,9 +64,24 @@ const Profile = ({
       </section>
       <div id="userPlaylist">
         <p>User's Playlist Here</p>
-        <button className="buttonz" id="createPL" onClick={handleCreatePlaylist}>{createNew ? "Cancel" : "Create Playlist"}</button>
-        {createNew ? <input placeholder='Playlist Name' onChange={(e) => setNewPlaylistTitle(e.target.value)}/> : null}
-        {createNew ? <button className="buttonz" onClick={submitNewPlaylist}>Add Playlist</button> : null}
+        <button
+          className="buttonz"
+          id="createPL"
+          onClick={handleCreatePlaylist}
+        >
+          {createNew ? 'Cancel' : 'Create Playlist'}
+        </button>
+        {createNew ? (
+          <input
+            placeholder="Playlist Name"
+            onChange={(e) => setNewPlaylistTitle(e.target.value)}
+          />
+        ) : null}
+        {createNew ? (
+          <button className="buttonz" onClick={submitNewPlaylist}>
+            Add Playlist
+          </button>
+        ) : null}
         <div className="playlistCard">
           {userPlaylists?.map((userPlaylist, index) => (
             <PlaylistCard
