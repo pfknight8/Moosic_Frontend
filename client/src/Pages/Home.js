@@ -17,7 +17,7 @@ const Home = ({
   return (
     <div className="home">
       <h1 className="title"> Moosic</h1>
-      <p>A music site.</p>
+      <p>A music site</p>
       <img
         className="background"
         src="https://i.pinimg.com/736x/d4/68/b5/d468b54752fbc11b232d90418a827f98.jpg"
