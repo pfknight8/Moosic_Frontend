@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import Client, { BASE_URL } from "../services/api"
 
@@ -12,7 +11,6 @@ const SongDetails = ({
   setSelectedPlaylist
 }) => {
   //State
-  const [toPlaylist, setToPlaylist] = useState(null)
   const navigate = useNavigate()
   //Functions
   const handleBackToSearch = () => {
@@ -41,7 +39,7 @@ const SongDetails = ({
       <div className="optDiv">
         <h4>Add to a playlist</h4>
         {userPlaylists.map((playlist) => (
-          <button onClick={() => handleAddToPlaylist(playlist.id)}>{playlist.title}</button>
+          <button key={playlist.id} onClick={() => handleAddToPlaylist(playlist.id)}>{playlist.title}</button>
         ))}
       </div>
     )
