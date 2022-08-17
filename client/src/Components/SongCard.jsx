@@ -13,7 +13,7 @@ const SongCard = ({ song, handleSongSelect }) => {
         ) : null}
       </div>
       <div className="info-box">
-        <h2>Title: {song.title}</h2>
+        <h2 className="song">Song: {song.title}</h2>
       </div>
       <button className="buttonz" onClick={handleSongSelect}>
         Click for Details

@@ -46,9 +46,9 @@ const Profile = ({
       <section>
         <div id="userInfo">
           <h2>{user.username}</h2>
-          <h3>{user.email}</h3>
+          {/* <h3>{user.email}</h3> */}
           {isFormActive ? <UserControls user={user} /> : null}
-          <button className="buttonz" onClick={toggleActive}>
+          <button className="editAccountButton" onClick={toggleActive}>
             Edit Account
           </button>
         </div>
@@ -64,6 +64,7 @@ const Profile = ({
         </button>
         {createNew ? (
           <input
+            className="createPlaylistName"
             placeholder="Playlist Name"
             onChange={(e) => setNewPlaylistTitle(e.target.value)}
           />
