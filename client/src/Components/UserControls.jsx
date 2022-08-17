@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Client, { BASE_URL } from '../services/api'
 import { useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+
 export default function Edit(props) {
   const [email, setEmail] = useState(props.user.email)
   const [username, setUsername] = useState(props.user.username)

@@ -2,6 +2,7 @@ import SongCard from '../Components/SongCard'
 import { useNavigate } from 'react-router-dom'
 import Client, { BASE_URL } from '../services/api'
 import { useState } from 'react'
+
 const PlaylistDetails = ({
   selectedPlaylist,
   handleSongSelect,
