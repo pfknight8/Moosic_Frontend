@@ -87,7 +87,7 @@ function App() {
   }
   return (
     <div className="App">
-      <Header />
+      <Header LogOut={LogOut} user={user} authenticated={authenticated}/>
       {/* <NavBar /> */}
       <main>
         <Routes>
