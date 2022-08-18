@@ -17,13 +17,19 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await SignUpUser({
+    let dataSend = {
       username: formValues.username,
       email: formValues.email,
       password: formValues.password
-    })
-    setFormValues(initialFormValues)
-    navigate('/userLogin')
+    }
+    let res = await SignUpUser(dataSend)
+    console.log(res)
+    if (res.msg) {
+      alert("User already exists!")
+    } else {
+      setFormValues(initialFormValues)
+      navigate('/userLogin')
+    }
   }
   const handleReset = () => {
     setFormValues(initialFormValues)
