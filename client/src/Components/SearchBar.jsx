@@ -39,7 +39,7 @@ const SearchBar = ({
             className="searchField"
             id="search"
             onChange={handleFormChange}
-            placeholder="search"
+            placeholder="Artists or songs"
           ></input>
         </div>
         {/* <div className="searchField">
