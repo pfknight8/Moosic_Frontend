@@ -54,28 +54,29 @@ const Profile = ({
           </button>
         </div>
         <h2 className="username">{user.username}</h2>
-        <div id="socialFeatures"></div>
+        <div id="addPlaylistButtonAndCreatePlaylist">
+          <button
+            className="buttonz"
+            id="createPL"
+            onClick={handleCreatePlaylist}
+          >
+            {createNew ? 'Cancel' : 'Create Playlist'}
+          </button>
+          {createNew ? (
+            <input
+              className="createPlaylistName"
+              placeholder="Playlist Name"
+              onChange={(e) => setNewPlaylistTitle(e.target.value)}
+            />
+          ) : null}
+          {createNew ? (
+            <button className="buttonz" onClick={submitNewPlaylist}>
+              Add Playlist
+            </button>
+          ) : null}
+        </div>
       </section>
       <div id="userPlaylist">
-        <button
-          className="buttonz"
-          id="createPL"
-          onClick={handleCreatePlaylist}
-        >
-          {createNew ? 'Cancel' : 'Create Playlist'}
-        </button>
-        {createNew ? (
-          <input
-            className="createPlaylistName"
-            placeholder="Playlist Name"
-            onChange={(e) => setNewPlaylistTitle(e.target.value)}
-          />
-        ) : null}
-        {createNew ? (
-          <button className="buttonz" onClick={submitNewPlaylist}>
-            Add Playlist
-          </button>
-        ) : null}
         <div className="playlistCard">
           {userPlaylists?.map((userPlaylist, index) => (
             <PlaylistCard

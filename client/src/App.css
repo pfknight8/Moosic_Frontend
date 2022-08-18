@@ -206,14 +206,24 @@ nav {
 .songCard {
   margin: 30px;
 }
+#userPlaylist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .playlistCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .playlist {
   display: flex;
-  justify-content: space-around;
+  width: 70vw;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
   align-items: center;
   margin: 20px;
   border: 2px black solid;
@@ -277,5 +287,5 @@ nav {
   width: 70vw;
 }
 .username {
-  font-size: 27px;
+  font-size: 33px;
 }
