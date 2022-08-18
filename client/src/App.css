@@ -11,6 +11,11 @@ header {
   display: flex;
   justify-content: space-between;
 }
+.footer {
+  width: 100vw;
+  /* background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
+  background-size: cover; */
+}
 .title {
   color: black;
   font-size: 66px;
@@ -22,20 +27,37 @@ a:hover {
   text-decoration: none;
   color: rgb(37, 190, 214);
 }
+nav {
+  display: flex;
+  justify-content: flex-end;
+  background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
+  background-size: cover;
+  background-size: fit-content;
+}
+.logoHeader {
+  display: flex;
+  justify-content: flex-start;
+}
 .navBarLinks {
   padding: 17px;
   color: black;
   background-color: white;
+  width: fit-content;
+  height: fit-content;
   height: 1vh;
-  border-radius: 50%;
+}
+.logoH {
+  height: 13vh;
 }
 .logo {
-  padding-left: 10px;
-  height: 27vh;
+  padding: 10px;
+  height: 22vh;
 }
-.header {
-  background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
-  background-size: cover;
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 95vw;
+  height: 9vh;
 }
 .loginCard {
   display: flex;
@@ -254,4 +276,7 @@ a:hover {
 
 .background {
   width: 70vw;
+}
+.username {
+  font-size: 27px;
 }

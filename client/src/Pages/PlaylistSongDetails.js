@@ -44,18 +44,17 @@ const PlaylistSongDetails = ({
         ) : null}
       </div>
       <div className="info-box">
-        <h3 className="artist">
-          Artist: {userPLSong.name}
-        </h3>
-        <h4 className="length">
-          Length: {userPLSong.time/1000} seconds
-        </h4>
+        <h3 className="artist">Artist: {userPLSong.name}</h3>
+        <h4 className="length">Length: {userPLSong.time / 1000} seconds</h4>
       </div>
       <button className="buttonz" onClick={handleGoToSearch}>
         Search Songs
       </button>
-      <button className="buttonz" onClick={() => handleRemoveFromPlaylist(selectedPlaylist.id)}>
-        Remove Song
+      <button
+        className="buttonZ"
+        onClick={() => handleRemoveFromPlaylist(selectedPlaylist.id)}
+      >
+        Remove Song from Playlist
       </button>
       {selectedPlaylist ? (
         <button
@@ -64,7 +63,9 @@ const PlaylistSongDetails = ({
         >
           Back to Playlist
         </button>
-      ) : <p>Navigation Error! Lost knowledge of which playlist you came from.</p>}
+      ) : (
+        <p>Navigation Error! Lost knowledge of which playlist you came from.</p>
+      )}
     </div>
   )
 }

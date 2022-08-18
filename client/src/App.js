@@ -13,6 +13,7 @@ import Header from './Components/Header'
 import { CheckLogin } from './services/Auth'
 import './App.css'
 import Client, { BASE_URL } from './services/api'
+import Footer from './Components/Footer'
 // import axios from 'axios'
 // import { BASE_URL } from '../globals'
 
@@ -91,11 +92,11 @@ function App() {
   }
   return (
     <div className="App">
-      <Header LogOut={LogOut} user={user} authenticated={authenticated}/>
-      {/* <NavBar /> */}
+      <Header LogOut={LogOut} user={user} authenticated={authenticated} />
       <main>
         <Routes>
-          <Route path="/"
+          <Route
+            path="/"
             element={
               <Home
                 setSongSearchFilters={setSongSearchFilters}
@@ -114,21 +115,21 @@ function App() {
               />
             }
           />
-            <Route
-              path="/songs/:song_id"
-              element={
-                <SongDetails
-                  selectedSong={selectedSong}
-                  setSelectedSong={setSelectedSong}
-                  handleGoToSearch={handleGoToSearch}
-                  user={user}
-                  authenticated={authenticated}
-                  userPlaylists={userPlaylists}
-                  selectedPlaylist={selectedPlaylist}
-                  setSelectedPlaylist={setSelectedPlaylist}
-                />
-              }
-            />
+          <Route
+            path="/songs/:song_id"
+            element={
+              <SongDetails
+                selectedSong={selectedSong}
+                setSelectedSong={setSelectedSong}
+                handleGoToSearch={handleGoToSearch}
+                user={user}
+                authenticated={authenticated}
+                userPlaylists={userPlaylists}
+                selectedPlaylist={selectedPlaylist}
+                setSelectedPlaylist={setSelectedPlaylist}
+              />
+            }
+          />
           <Route
             path="/profile"
             element={
@@ -178,6 +179,7 @@ function App() {
             }
           />
         </Routes>
+        <Footer />
       </main>
     </div>
   )
