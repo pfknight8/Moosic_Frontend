@@ -1,24 +1,29 @@
 const SearchBar = ({
+  search,
+  setSearch,
   songSearchFilters,
   setSongSearchFilters,
   handleSearchSubmit
 }) => {
   const handleFormChange = (e) => {
-    let formItem = e.target.value
-    switch (e.target.id) {
-      case 'title':
-        setSongSearchFilters({ ...songSearchFilters, title: formItem })
-        break
-      case 'artist':
-        setSongSearchFilters({ ...songSearchFilters, artist: formItem })
-        break
-      case 'genre':
-        setSongSearchFilters({ ...songSearchFilters, genre: formItem })
-        break
-      default:
-        alert('Something went egregiously wrong!')
-    }
+    setSearch(e.target.value)
   }
+  // const handleFormChange = (e) => {
+  //   let formItem = e.target.value
+  //   switch (e.target.id) {
+  //     case 'title':
+  //       setSongSearchFilters({ ...songSearchFilters, title: formItem })
+  //       break
+  //     case 'artist':
+  //       setSongSearchFilters({ ...songSearchFilters, artist: formItem })
+  //       break
+  //     case 'genre':
+  //       setSongSearchFilters({ ...songSearchFilters, genre: formItem })
+  //       break
+  //     default:
+  //       alert('Something went egregiously wrong!')
+  //   }
+  // }
 
   const handleFormReset = () => {
     setSongSearchFilters({})
@@ -26,9 +31,18 @@ const SearchBar = ({
 
   return (
     <div className="searchCard">
-      <p className="searchHeader">SONG SEARCH</p>
+      <p className="searchHeader">SEARCH</p>
       <form onReset={handleFormReset} onSubmit={handleSearchSubmit}>
         <div className="searchField">
+          <label htmlFor="search">SEARCH: </label>
+          <input
+            className="searchField"
+            id="search"
+            onChange={handleFormChange}
+            placeholder="search"
+          ></input>
+        </div>
+        {/* <div className="searchField">
           <label htmlFor="title">TITLE: </label>
           <input
             className="searchField"
@@ -42,7 +56,7 @@ const SearchBar = ({
           <input
             className="searchField"
             id="artist"
-            onChange={handleFormChange}
+            // onChange={handleFormChange}
             placeholder="Artist"
           ></input>
         </div>
@@ -54,7 +68,7 @@ const SearchBar = ({
             onChange={handleFormChange}
             placeholder="Genre"
           ></input>
-        </div>
+        </div> */}
         <button className="buttonZ" type="reset" value="Reset">
           Reset
         </button>

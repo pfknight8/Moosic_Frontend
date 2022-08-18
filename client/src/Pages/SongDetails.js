@@ -23,7 +23,7 @@ const SongDetails = ({
     navigate(`/profile/playlist/${PL.id}`)
   }
   const handleAddToPlaylist = async (playlist_id) => {
-    let song_id = selectedSong.id
+    let song_id = selectedSong.data.id
     let response = await Client.post(
       `${BASE_URL}/api/playlist/addsong/${playlist_id}/${song_id}`
     )
@@ -78,20 +78,24 @@ const SongDetails = ({
 
   return (
     <div id="songDetailsPage">
-      <h1>Song: {selectedSong.title}</h1>
+      <h1>Song: {selectedSong.data.name}</h1>
       <div className="img-content">
-        {selectedSong.image ? (
+        {selectedSong.data.albumOfTrack.coverArt.sources[0].url ? (
           <img
             className="songCardImg"
-            src={selectedSong.image}
-            alt={selectedSong.title}
+            src={selectedSong.data.albumOfTrack.coverArt.sources[0].url}
+            alt={selectedSong.data.name}
             width="400"
           />
         ) : null}
       </div>
       <div className="info-box">
-        <h3 className="artist">Artist: {selectedSong.artist}</h3>
-        <h4 className="length">Length: {selectedSong.time} seconds</h4>
+        <h3 className="artist">
+          Artist: {selectedSong.data.artists.items[0].profile.name}
+        </h3>
+        <h4 className="length">
+          Length: {selectedSong.data.duration.totalMilliseconds} seconds
+        </h4>
       </div>
       <button className="buttonz" onClick={handleBackToSearch}>
         Back to Search
