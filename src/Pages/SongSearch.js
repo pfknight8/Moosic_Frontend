@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import SearchBar from '../Components/SearchBar'
 import SongCard from '../Components/SongCard'
-// import { BASE_URL } from '../services/api'
-// import Client from '../services/api'
 import axios from 'axios'
 
 const SongSearch = ({

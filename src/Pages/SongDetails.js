@@ -104,8 +104,11 @@ const SongDetails = ({
         <h3 className="artist">
           Artist: {selectedSong.data.artists.items[0].profile.name}
         </h3>
+        <h4 className="artist">
+          Album: {selectedSong.data.albumOfTrack.name}
+        </h4>
         <h4 className="length">
-          Length: {selectedSong.data.duration.totalMilliseconds} seconds
+          Length: {selectedSong.data.duration.totalMilliseconds / 1000} seconds
         </h4>
       </div>
       <button className="buttonz" onClick={handleGoToSearch}>
