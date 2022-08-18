@@ -18,26 +18,30 @@ const Header = ({ LogOut, user }) => {
   }
   return (
     <header className="header">
-      <Link to="/">
-        <img className="logo" src={url} alt=""></img>
-      </Link>
-      <nav className="navBarLinks">
-        <Link className="navBarLinks" to="/">
-          Home
-        </Link>
-        <Link className="navBarLinks" to="/songs">
-          Search
-        </Link>
-        {user ? (
-        <Link className="navBarLinks" to="/profile">
-          Profile
-        </Link>
-        ) : (
-        <Link className="navBarLinks" to="/signUp">
-          Sign Up
-        </Link>
-        )}
-        {userButtonOpt}
+      <nav>
+        <div className="logoHeader">
+          <Link to="/">
+            <img className="logoH" src={url} alt=""></img>
+          </Link>
+        </div>
+        <div className="nav">
+          <Link className="navBarLinks" to="/">
+            Home
+          </Link>
+          <Link className="navBarLinks" to="/songs">
+            Search
+          </Link>
+          {user ? (
+            <Link className="navBarLinks" to="/profile">
+              Profile
+            </Link>
+          ) : (
+            <Link className="navBarLinks" to="/signUp">
+              Sign Up
+            </Link>
+          )}
+          {userButtonOpt}
+        </div>
       </nav>
     </header>
   )

@@ -51,6 +51,7 @@ const Profile = ({
             Edit Account
           </button>
         </div>
+        <h2 className="username">{user.username}</h2>
         <div id="socialFeatures"></div>
       </section>
       <div id="userPlaylist">

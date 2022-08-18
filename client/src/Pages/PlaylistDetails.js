@@ -42,7 +42,7 @@ const PlaylistDetails = ({
     <div id="playlistDetailsPage">
       <div className="playlistButtons">
         <button className="buttonz" onClick={handleUpdatePlaylist}>
-          {updatePl ? 'Cancel' : 'Edit Playlist'}
+          {updatePl ? 'Cancel' : 'Edit Playlist Name'}
         </button>
         {updatePl ? (
           <input
