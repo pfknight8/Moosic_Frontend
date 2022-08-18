@@ -14,10 +14,6 @@ const SongDetails = ({
   //State
   const navigate = useNavigate()
   //Functions
-  const handleBackToPlaylist = (PL) => {
-    setSelectedSong(null)
-    navigate(`/profile/playlist/${PL.id}`)
-  }
   const handleAddToPlaylist = async (playlist_id) => {
     let song_name = selectedSong.data.name
     console.log(selectedSong.data.name)
@@ -120,14 +116,6 @@ const SongDetails = ({
       <button className="buttonz" onClick={handleGoToSearch}>
         Back to Search
       </button>
-      {selectedPlaylist ? (
-        <button
-          className="buttonz"
-          onClick={() => handleBackToPlaylist(selectedPlaylist)}
-        >
-          Back to Playlist
-        </button>
-      ) : null}
       {!selectedPlaylist ? selectOptions : null}
     </div>
   )
