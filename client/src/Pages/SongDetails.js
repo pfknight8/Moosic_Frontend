@@ -19,7 +19,31 @@ const SongDetails = ({
     navigate(`/profile/playlist/${PL.id}`)
   }
   const handleAddToPlaylist = async (playlist_id) => {
-    let song_id = selectedSong.data.id
+    let song_name = selectedSong.data.name
+    console.log(selectedSong.data.name)
+    let song_time = selectedSong.data.duration.totalMilliseconds
+    let song_artist = selectedSong.data.artists.items[0].profile.name
+    let song_album = selectedSong.data.albumOfTrack.name
+    let song_image = selectedSong.data.albumOfTrack.coverArt.sources[0].url
+    let songExists = await Client.get(`${BASE_URL}/api/song`, { params: {name: song_name}})
+    let song_id;
+    console.log(songExists)
+    if (!songExists.data.message) {
+      song_id = songExists.data.id
+      console.log(song_id)
+    } else {
+      let newSong = {
+        name: song_name,
+        time: song_time,
+        artist: song_artist,
+        album: song_album,
+        image: song_image
+      }
+      await Client.post(`${BASE_URL}/api/song`, newSong)
+      let newSongIn = await Client.get(`${BASE_URL}/api/song`, {params: {name: song_name}})
+      console.log(newSongIn)
+      song_id = newSongIn.data.id
+    }
     let response = await Client.post(
       `${BASE_URL}/api/playlist/addsong/${playlist_id}/${song_id}`
     )
