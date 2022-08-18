@@ -3,7 +3,7 @@ import SearchBar from '../Components/SearchBar'
 import SongCard from '../Components/SongCard'
 import { BASE_URL } from '../services/api'
 import Client from '../services/api'
-import axios from 'axios'
+// import axios from 'axios'
 
 const SongSearch = ({
   songSearchFilters,
@@ -14,35 +14,35 @@ const SongSearch = ({
   const [searchResults, setSearchResults] = useState(null)
   //Functions
 
-  const options = {
-    method: 'GET',
-    url: 'https://spotify23.p.rapidapi.com/search/',
-    params: {
-      q: '<REQUIRED>',
-      type: 'multi',
-      offset: '0',
-      limit: '10',
-      numberOfTopResults: '5'
-    },
-    headers: {
-      'X-RapidAPI-Key': '23ff26e990msh4c310288556d19ap115d19jsnb0dedeb0f45c',
-      'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
-    }
-  }
+  // const options = {
+  //   method: 'GET',
+  //   url: 'https://spotify23.p.rapidapi.com/search/',
+  //   params: {
+  //     q: '<REQUIRED>',
+  //     type: 'multi',
+  //     offset: '0',
+  //     limit: '10',
+  //     numberOfTopResults: '5'
+  //   },
+  //   headers: {
+  //     'X-RapidAPI-Key': '23ff26e990msh4c310288556d19ap115d19jsnb0dedeb0f45c',
+  //     'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+  //   }
+  // }
 
   const handleSearchSubmit = async (e) => {
     e.preventDefault()
-    await axios
-      .request(options)
-      .then(function (response) {
-        console.log(response.data)
-      })
-      .catch(function (error) {
-        console.error(error)
-      })
-    // const res = await Client.get(`${BASE_URL}/api/song`, {
-    //   params: songSearchFilters
+    // await axios
+    //   .request(options)
+    //   .then(function (response) {
+    //     setSearchResults(response.data.tracks.items)
     // })
+    // .catch(function (error) {
+    //   console.error(error)
+    // })
+    const res = await Client.get(`${BASE_URL}/api/song`, {
+      params: songSearchFilters
+    })
     setSearchResults(res.data)
   }
   return (
