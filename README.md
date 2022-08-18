@@ -21,7 +21,7 @@
 
 ### **_Description_**
 
-Moosic, a music app where users are able to browse for songs and create their own playlist.
+Moosic, a music app where users are able to browse for songs as well as create playlists where they can add their favorite songs! 
 
 ---
 
