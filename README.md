@@ -12,38 +12,38 @@
 
 ---
 
-### **_Project Links_**
-
-[Moosic Backend](https://github.com/Tommy-layy/moosic_backend) | [Trello](https://trello.com/b/t17RUM3i/moosic) | [Deployment]()
-
 ### **_Personal Links_** 
 
 [Emily Byrne](https://www.linkedin.com/in/emilybyrne3/) | [Patrick Knight](https://www.linkedin.com/in/patrick-f-knight/) | [Tommy Le](https://www.linkedin.com/in/tommyyle/)
 
 ---
+### **_Project Links_**
+
+[Moosic Backend](https://github.com/Tommy-layy/moosic_backend) | [Trello](https://trello.com/b/t17RUM3i/moosic) | [Deployment]()
+
+---
 
 ### **_Description_**
 
-#### A description, preferably brief, regarding the project. What it is, why, when, etc.
+Moosic, a music app where users are able to browse for songs and create their own playlist.
 
 ---
 
 ### **_Technologies_**
 
-### PERN Stack
-
 <img alt="PERN" width='450' src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/03/PERN.png" />
 
-#### Postgresql, Express, React, Node
-
-#### Deployed with Heroku
+* PostgreSQL
+* Express
+* React
+* Node
+* Deployed using Heroku
 
 ---
 
 ### **_Screenshots_**
 
-
-#### Something will go here: consider making an instructions section.
+ Some SS from our project will go here along with any other images we may want to use.
 
 ---
 
@@ -57,5 +57,5 @@
 
 ### **_Credits_**
 
-- #### www.freecodecamp.org for 'PERN' logo.
-- #### {Others as used}
+* www.freecodecamp.org for 'PERN' logo
+* Other resources we may have used
