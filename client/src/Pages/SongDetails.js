@@ -4,6 +4,7 @@ import Client, { BASE_URL } from '../services/api'
 const SongDetails = ({
   selectedSong,
   setSelectedSong,
+  handleGoToSearch,
   user,
   authenticated,
   userPlaylists,
@@ -13,11 +14,6 @@ const SongDetails = ({
   //State
   const navigate = useNavigate()
   //Functions
-  const handleBackToSearch = () => {
-    setSelectedSong(null)
-    setSelectedPlaylist(null)
-    navigate('/songs')
-  }
   const handleBackToPlaylist = (PL) => {
     setSelectedSong(null)
     navigate(`/profile/playlist/${PL.id}`)
@@ -97,7 +93,7 @@ const SongDetails = ({
           Length: {selectedSong.data.duration.totalMilliseconds} seconds
         </h4>
       </div>
-      <button className="buttonz" onClick={handleBackToSearch}>
+      <button className="buttonz" onClick={handleGoToSearch}>
         Back to Search
       </button>
       {selectedPlaylist ? (

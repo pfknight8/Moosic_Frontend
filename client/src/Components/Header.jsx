@@ -28,12 +28,15 @@ const Header = ({ LogOut, user }) => {
         <Link className="navBarLinks" to="/songs">
           Search
         </Link>
+        {user ? (
         <Link className="navBarLinks" to="/profile">
           Profile
         </Link>
+        ) : (
         <Link className="navBarLinks" to="/signUp">
           Sign Up
         </Link>
+        )}
         {userButtonOpt}
       </nav>
     </header>
