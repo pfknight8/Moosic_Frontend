@@ -23,7 +23,6 @@ const SignUp = () => {
       password: formValues.password
     }
     let res = await SignUpUser(dataSend)
-    console.log(res)
     if (res.msg) {
       alert("User already exists!")
     } else {

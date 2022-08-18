@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 const url = require('../Components/Moosic.png')
 const Header = ({ LogOut, user }) => {
-  //
+  
   let userButtonOpt
   if (user) {
     userButtonOpt = (

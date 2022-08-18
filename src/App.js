@@ -14,11 +14,9 @@ import { CheckLogin } from './services/Auth'
 import './App.css'
 import Client, { BASE_URL } from './services/api'
 import Footer from './Components/Footer'
-// import axios from 'axios'
-// import { BASE_URL } from '../globals'
 
 function App() {
-  //State
+  
   const [songSearchFilters, setSongSearchFilters] = useState({})
   const [selectedSong, setSelectedSong] = useState(null)
   const [selectedPlaylist, setSelectedPlaylist] = useState(null)
@@ -28,7 +26,7 @@ function App() {
   const [user, setUser] = useState(null)
 
   let navigate = useNavigate()
-  //Functions
+  
   const handleSongSelect = (song) => {
     setSelectedSong(song)
     navigate(`/songs/${song.id}`)
@@ -54,20 +52,6 @@ function App() {
     navigate('/songs')
   }
 
-  // would you add this here, or in SongDetails.js?
-  //   const [songDetails, setSongDetails] = useState({})
-
-  //   useEffect(() => {
-  //     async function getSong() {
-  //       const res = await axios.get(
-  //         `${BASE_URL}/movie/${props.selectedSong}?api_key=${process.env.REACT_APP_DEEZER_KEY}`
-  //       )
-  //       setSongDetails(res.data)
-  //     }
-  //     getSong()
-  //   }, [props.selectedSong])
-  //
-
   // Auth functions
   const checkToken = async () => {
     const user = await CheckLogin()
@@ -90,6 +74,7 @@ function App() {
     toggleAuthenticated(false)
     localStorage.clear()
   }
+  
   return (
     <div className="App">
       <Header LogOut={LogOut} user={user} authenticated={authenticated} />

@@ -1,5 +1,5 @@
 const SongCard = ({ song, handleSongSelect }) => {
-  //
+  
   return (
     <div className={`songCard ${song.data.genre}Card`}>
       <div className="img-content">
@@ -23,5 +23,3 @@ const SongCard = ({ song, handleSongSelect }) => {
 }
 
 export default SongCard
-
-//The multiple classNames will be useful for formatting. The 'song.genre' template literal will allow us to conditionally format the card, if desired.

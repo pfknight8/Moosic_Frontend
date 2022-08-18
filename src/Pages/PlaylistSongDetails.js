@@ -9,9 +9,9 @@ const PlaylistSongDetails = ({
   user,
   authenticated
 }) => {
-  //State
+
   const navigate = useNavigate()
-  //Functions
+  
   const handleBackToPlaylist = (PL) => {
     setUserPLSong(null)
     navigate(`/profile/playlist/${PL.id}`)
@@ -21,7 +21,6 @@ const PlaylistSongDetails = ({
     let response = await Client.delete(
       `${BASE_URL}/api/playlist/addsong/${playlist_id}/${song_id}`
     )
-    console.log(response.data)
     if (!response.data.message) {
       alert(`Database Error!`)
     } else {
