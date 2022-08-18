@@ -1,15 +1,19 @@
 import { Link } from 'react-router-dom'
 const url = require('../Components/Moosic.png')
-const Header = ({LogOut, user}) => {
+const Header = ({ LogOut, user }) => {
   //
-  let userButtonOpt;
+  let userButtonOpt
   if (user) {
     userButtonOpt = (
-      <Link className='navBarLinks' onClick={LogOut} to="/">Log Out</Link>
+      <Link className="navBarLinks" onClick={LogOut} to="/">
+        Log Out
+      </Link>
     )
   } else {
     userButtonOpt = (
-      <Link className="navBarLinks" to="/userLogin">Login</Link>
+      <Link className="navBarLinks" to="/userLogin">
+        Login
+      </Link>
     )
   }
   return (
@@ -22,7 +26,7 @@ const Header = ({LogOut, user}) => {
           Home
         </Link>
         <Link className="navBarLinks" to="/songs">
-          Search Songs
+          Search
         </Link>
         <Link className="navBarLinks" to="/profile">
           Profile
