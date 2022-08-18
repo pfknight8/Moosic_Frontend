@@ -13,8 +13,6 @@ header {
 }
 .footer {
   width: 100vw;
-  /* background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
-  background-size: cover; */
 }
 .title {
   color: black;
@@ -48,15 +46,16 @@ nav {
 }
 .logoH {
   height: 13vh;
+  padding-left: 10px;
 }
 .logo {
   padding: 10px;
-  height: 22vh;
+  height: 27vh;
 }
 .nav {
   display: flex;
   justify-content: flex-end;
-  width: 95vw;
+  width: 93vw;
   height: 9vh;
 }
 .loginCard {
