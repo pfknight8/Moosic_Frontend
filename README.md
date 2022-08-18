@@ -10,10 +10,6 @@
 
 ###  Created By: Emily Byrne, Patrick Knight, Tommy Le
 
----
-
-### **_Personal Links_** 
-
 [Emily Byrne](https://www.linkedin.com/in/emilybyrne3/) | [Patrick Knight](https://www.linkedin.com/in/patrick-f-knight/) | [Tommy Le](https://www.linkedin.com/in/tommyyle/)
 
 ---
