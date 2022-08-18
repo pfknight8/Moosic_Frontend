@@ -36,6 +36,7 @@ const PlaylistDetails = ({
     const res = await Client.delete(
       `${BASE_URL}/api/playlist/${selectedPlaylist.id}`
     )
+    setSelectedPlaylist(null)
     navigate('/profile')
   }
   return (

@@ -111,6 +111,7 @@ function App() {
                 setSongSearchFilters={setSongSearchFilters}
                 songSearchFilters={songSearchFilters}
                 handleSongSelect={handleSongSelect}
+                setSelectedPlaylist={setSelectedPlaylist}
               />
             }
           />
@@ -138,6 +139,7 @@ function App() {
                 userPlaylists={userPlaylists}
                 handlePlaylistSelect={handlePlaylistSelect}
                 handleUserPlaylists={handleUserPlaylists}
+                setSelectedPlaylist={setSelectedPlaylist}
                 LogOut={LogOut}
               />
             }

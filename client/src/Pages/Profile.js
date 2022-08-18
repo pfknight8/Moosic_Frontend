@@ -11,6 +11,7 @@ const Profile = ({
   userPlaylists,
   handlePlaylistSelect,
   handleUserPlaylists,
+  setSelectedPlaylist,
   LogOut
 }) => {
   //State
@@ -40,6 +41,7 @@ const Profile = ({
   useEffect(() => {
     if (authenticated) {
       handleUserPlaylists(user)
+      setSelectedPlaylist(null)
     }
   }, [createNew])
   return user && authenticated ? (

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import SearchBar from '../Components/SearchBar'
 import SongCard from '../Components/SongCard'
 // import { BASE_URL } from '../services/api'
@@ -8,7 +8,8 @@ import axios from 'axios'
 const SongSearch = ({
   songSearchFilters,
   setSongSearchFilters,
-  handleSongSelect
+  handleSongSelect,
+  setSelectedPlaylist
 }) => {
   //State
   const [search, setSearch] = useState('')
@@ -43,11 +44,11 @@ const SongSearch = ({
       })
 
     setSearch(value)
-    // const res = await Client.get(`${BASE_URL}/api/song`, {
-    //   params: songSearchFilters
-    // })
-    // setSearchResults(res.data)
   }
+  useEffect(() => {
+    setSelectedPlaylist(null)
+  }, [])
+
   return (
     <div id="songSearch">
       <div id="searchOptions">
