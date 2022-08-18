@@ -11,10 +11,9 @@ const SongSearch = ({
   handleSongSelect,
   setSelectedPlaylist
 }) => {
-  //State
+  
   const [search, setSearch] = useState('')
   const [searchResults, setSearchResults] = useState(null)
-  //Functions
 
   const options = {
     method: 'GET',

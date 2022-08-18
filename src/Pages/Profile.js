@@ -14,12 +14,12 @@ const Profile = ({
   setSelectedPlaylist,
   LogOut
 }) => {
-  //State
+  
   const [isFormActive, setIsFormActive] = useState(false)
   const [createNew, toggleCreateNew] = useState(false)
   const [newPlaylistTitle, setNewPlaylistTitle] = useState(null)
   const navigate = useNavigate()
-  //Functions
+  
   const toggleActive = (e) => {
     setIsFormActive(!isFormActive)
     if (e.target.innerHTML === 'Edit Account') {
@@ -99,7 +99,3 @@ const Profile = ({
 }
 
 export default Profile
-
-// Will store user's info, with buttons to change (for the update functions), or to delete account.
-
-// Will also display their playlists...as playlist cards.

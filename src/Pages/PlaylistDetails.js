@@ -1,7 +1,7 @@
 import PlaylistSongCard from '../Components/PlaylistSongCard'
 import { useNavigate } from 'react-router-dom'
 import Client, { BASE_URL } from '../services/api'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 const PlaylistDetails = ({
   selectedPlaylist,
@@ -10,11 +10,10 @@ const PlaylistDetails = ({
   user,
   authenticated
 }) => {
-  //State
+
   const navigate = useNavigate()
   const [updatePl, toggleUpdatePl] = useState(false)
   const [newPlaylistTitle, setNewPlaylistTitle] = useState(null)
-  //Functions
 
   const handleUpdatePlaylist = () => {
     toggleUpdatePl(!updatePl)

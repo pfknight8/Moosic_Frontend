@@ -1,4 +1,5 @@
 const PlaylistCard = ({ userPlaylist, handlePlaylistSelect }) => {
+  
   return (
     <div className="playlist">
       <h2 className="playlistName"> {userPlaylist.title} </h2>
@@ -10,5 +11,3 @@ const PlaylistCard = ({ userPlaylist, handlePlaylistSelect }) => {
 }
 
 export default PlaylistCard
-
-// Will be used to display a user's playlists on their profile page.
