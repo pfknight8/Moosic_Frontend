@@ -6,6 +6,7 @@ import Profile from './Pages/Profile'
 import SongSearch from './Pages/SongSearch'
 import SongDetails from './Pages/SongDetails'
 import PlaylistDetails from './Pages/PlaylistDetails'
+import PlaylistSongDetails from './Pages/PlaylistSongDetails'
 import SignUp from './Pages/SignUp'
 import Login from './Pages/Login'
 import Header from './Components/Header'
@@ -21,6 +22,7 @@ function App() {
   const [selectedSong, setSelectedSong] = useState(null)
   const [selectedPlaylist, setSelectedPlaylist] = useState(null)
   const [userPlaylists, setUserPlaylists] = useState(null)
+  const [userPLSong, setUserPLSong] = useState(null)
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
 
@@ -29,6 +31,10 @@ function App() {
   const handleSongSelect = (song) => {
     setSelectedSong(song)
     navigate(`/songs/${song.id}`)
+  }
+  const handlePLSongSelect = (song) => {
+    setUserPLSong(song)
+    navigate(`/profile/playlist/songs/${song.id}`)
   }
 
   const handlePlaylistSelect = (playlist) => {
@@ -39,6 +45,12 @@ function App() {
     let user_id = user.id
     let playlists = await Client.get(`${BASE_URL}/api/playlist/${user_id}`)
     setUserPlaylists(playlists.data)
+  }
+
+  const handleGoToSearch = () => {
+    setUserPLSong(null)
+    setSelectedPlaylist(null)
+    navigate('/songs')
   }
 
   // would you add this here, or in SongDetails.js?
@@ -102,6 +114,21 @@ function App() {
               />
             }
           />
+            <Route
+              path="/songs/:song_id"
+              element={
+                <SongDetails
+                  selectedSong={selectedSong}
+                  setSelectedSong={setSelectedSong}
+                  handleGoToSearch={handleGoToSearch}
+                  user={user}
+                  authenticated={authenticated}
+                  userPlaylists={userPlaylists}
+                  selectedPlaylist={selectedPlaylist}
+                  setSelectedPlaylist={setSelectedPlaylist}
+                />
+              }
+            />
           <Route
             path="/profile"
             element={
@@ -126,26 +153,25 @@ function App() {
             }
           />
           <Route
-            path="/songs/:song_id"
-            element={
-              <SongDetails
-                selectedSong={selectedSong}
-                setSelectedSong={setSelectedSong}
-                user={user}
-                authenticated={authenticated}
-                userPlaylists={userPlaylists}
-                selectedPlaylist={selectedPlaylist}
-                setSelectedPlaylist={setSelectedPlaylist}
-              />
-            }
-          />
-          <Route
             path="/profile/playlist/:playlist_id"
             element={
               <PlaylistDetails
                 selectedPlaylist={selectedPlaylist}
-                handleSongSelect={handleSongSelect}
                 setSelectedPlaylist={setSelectedPlaylist}
+                handlePLSongSelect={handlePLSongSelect}
+                user={user}
+                authenticated={authenticated}
+              />
+            }
+          />
+          <Route
+            path="/profile/playlist/songs/:song_id"
+            element={
+              <PlaylistSongDetails
+                selectedPlaylist={selectedPlaylist}
+                userPLSong={userPLSong}
+                setUserPLSong={setUserPLSong}
+                handleGoToSearch={handleGoToSearch}
                 user={user}
                 authenticated={authenticated}
               />

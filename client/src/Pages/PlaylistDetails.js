@@ -1,11 +1,11 @@
-import SongCard from '../Components/SongCard'
+import PlaylistSongCard from '../Components/PlaylistSongCard'
 import { useNavigate } from 'react-router-dom'
 import Client, { BASE_URL } from '../services/api'
 import { useState, useEffect } from 'react'
 
 const PlaylistDetails = ({
   selectedPlaylist,
-  handleSongSelect,
+  handlePLSongSelect,
   setSelectedPlaylist,
   user,
   authenticated
@@ -64,10 +64,10 @@ const PlaylistDetails = ({
       </div>
       <div className="songCardHolder">
         {selectedPlaylist.songs?.map((song, index) => (
-          <SongCard
+          <PlaylistSongCard
             key={song.id}
             song={song}
-            handleSongSelect={() => handleSongSelect(song)}
+            handlePLSongSelect={() => handlePLSongSelect(song)}
           />
         ))}
       </div>
