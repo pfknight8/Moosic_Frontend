@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
 .App {
   text-align: center;
   width: 100vw;
@@ -6,36 +7,47 @@
   font-family: 'Aboreto', cursive;
   font-weight: bold;
 }
+
 header {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
 }
+
 .footer {
   width: 100vw;
 }
+
 .title {
   color: black;
   font-size: 66px;
+  text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC, 2px 2px 5px rgba(206,89,55,0);
 }
+
 a:link {
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: none;
   color: rgb(37, 190, 214);
 }
+
 nav {
   display: flex;
   justify-content: flex-end;
   background-image: url('https://i.etsystatic.com/21337046/r/il/b4e980/2380433915/il_794xN.2380433915_lm4a.jpg');
   background-size: cover;
   background-size: fit-content;
+  border: 5px outset #000000;
+  border-radius: 4px 4px 4px 4px;
 }
+
 .logoHeader {
   display: flex;
   justify-content: flex-start;
 }
+
 .navBarLinks {
   padding: 17px;
   color: black;
@@ -44,20 +56,24 @@ nav {
   height: fit-content;
   height: 1vh;
 }
+
 .logoH {
-  height: 13vh;
+  height: 12vh;
   padding-left: 10px;
 }
+
 .logo {
   padding: 10px;
-  height: 27vh;
+  height: 16vh;
 }
+
 .nav {
   display: flex;
   justify-content: flex-end;
   width: 93vw;
   height: 9vh;
 }
+
 .loginCard {
   display: flex;
   flex-direction: column;
@@ -72,6 +88,7 @@ nav {
   width: 44vw;
   height: 27vw;
 }
+
 .loginField {
   color: black;
   text-align: right;
@@ -79,6 +96,7 @@ nav {
   font-size: 27px;
   font-weight: 500;
 }
+
 .loginHeader {
   font-size: 39px;
   background-color: white;
@@ -86,6 +104,7 @@ nav {
   width: 33vw;
   color: black;
 }
+
 .signUpPage {
   display: flex;
   flex-direction: column;
@@ -100,6 +119,7 @@ nav {
   width: 47vw;
   height: 27vw;
 }
+
 .signUpField {
   color: black;
   text-align: right;
@@ -107,6 +127,7 @@ nav {
   font-size: 27px;
   font-weight: 500;
 }
+
 .signUpHeader {
   font-size: 39px;
   background-color: white;
@@ -114,6 +135,7 @@ nav {
   width: 36vw;
   color: black;
 }
+
 .searchCard {
   display: flex;
   flex-direction: column;
@@ -128,6 +150,7 @@ nav {
   width: 47vw;
   height: 47vh;
 }
+
 .searchField {
   color: black;
   text-align: right;
@@ -135,6 +158,7 @@ nav {
   font-size: 32px;
   font-weight: 500;
 }
+
 .searchHeader {
   font-size: 39px;
   background-color: white;
@@ -142,6 +166,7 @@ nav {
   width: 36vw;
   color: black;
 }
+
 .buttonz:hover {
   text-decoration: none;
   background-color: rgb(37, 190, 214);
@@ -155,10 +180,12 @@ nav {
   font-family: 'Aboreto', cursive;
   font-weight: bold;
 }
+
 .buttonZ:hover {
   text-decoration: none;
   background-color: rgb(201, 138, 216);
 }
+
 .buttonZ {
   font-size: 17px;
   margin-top: 11px;
@@ -167,17 +194,21 @@ nav {
   font-family: 'Aboreto', cursive;
   font-weight: bold;
 }
+
 .searchResults {
   font-size: 30px;
 }
+
 .bottomQ {
   background-color: white;
   font-size: 25px;
   color: black;
 }
+
 .here {
   color: rgb(80, 208, 16);
 }
+
 .protectedContent {
   display: flex;
   flex-direction: column;
@@ -192,6 +223,7 @@ nav {
   width: 44vw;
   height: 27vw;
 }
+
 .needLogin {
   background-color: white;
   font-size: 33px;
@@ -203,21 +235,25 @@ nav {
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
 }
+
 .songCard {
   margin: 30px;
 }
+
 #userPlaylist {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 .playlistCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .playlist {
   display: flex;
   width: 70vw;
@@ -229,24 +265,29 @@ nav {
   border: 2px black solid;
   color: black;
 }
+
 .songCardImg {
   height: 333px;
   width: 333px;
   margin: 30px;
 }
+
 .playlistName {
   background-color: white;
 }
+
 @media screen and (max-width: 300px) {
   .songCardHolder {
     display: flex;
     flex-direction: column;
   }
 }
+
 .msg {
   font-size: 22px;
   font-weight: bold;
 }
+
 .playlistButtons {
   display: flex;
   justify-content: flex-end;
@@ -254,18 +295,23 @@ nav {
   font-family: 'Aboreto', cursive;
   font-weight: bold;
 }
+
 .song {
   color: black;
 }
+
 .artist {
   font-size: 27px;
 }
+
 .length {
   font-size: 21px;
 }
+
 .createPlaylistName {
   height: 20px;
 }
+
 .editAccountButton {
   display: flex;
   justify-content: flex-end;
@@ -276,6 +322,7 @@ nav {
   font-family: 'Aboreto', cursive;
   font-weight: bold;
 }
+
 .editAccountButton:hover {
   text-decoration: none;
   background-color: rgb(201, 138, 216);
@@ -286,6 +333,7 @@ nav {
 .background {
   width: 70vw;
 }
+
 .username {
   font-size: 33px;
 }
