@@ -15,7 +15,7 @@
 ---
 ### **_Project Links_**
 
-[Moosic Backend](https://github.com/Tommy-layy/moosic_backend) | [Trello](https://trello.com/b/t17RUM3i/moosic) | [Deployment]()
+[Moosic Backend](https://github.com/Tommy-layy/moosic_backend) | [Trello](https://trello.com/b/t17RUM3i/moosic) | [Deployment](https://moosicfrontend.herokuapp.com/)
 
 ---
 
@@ -39,19 +39,37 @@ Moosic, a music app where users are able to browse for songs as well as create p
 
 ### **_Screenshots_**
 
+#### Component Hierarchy Diagram
+<img alt="component hierarchy diagram" width='500' src="./public/Moosic_CHD.png" />
+
  Some SS from our project will go here along with any other images we may want to use.
+
+---
+### **_Getting Started_**
+
+- `Fork` & `Clone` this repository.
+- `npm i` to install necessary dependencies.
+
+#### Dependencies include React, react-dom, react-router-dom, dotenv, axios, and sweetalert. These should already be in the package.json files, but will be good to make sure. Please make sure that your local machine has the proper installations for these, as well.
+
+#### Remember that this repo is only the frontend portion of the Moosic project. The backend portion is availabla via the link provided above.
 
 ---
 
 ### **_Future Updates_**
 
-- [ ] Start Coding
-- [ ] Link to Backend
-- [ ] User to user interactions
+- [x] ~~Authentication required to view certain content~~
+- [x] ~~Use a 3rd party API to get songs~~
+- [ ] Users can rate songs
+- [ ] Users can find and connect to other users
+- [ ] User can post messages to each other/a forum
 
 ---
 
 ### **_Credits_**
 
+#### Created as a part of the General Assembly - SEI program.
+
 * www.freecodecamp.org for 'PERN' logo
-* Other resources we may have used
+* [Rapid API](https://rapidapi.com/?site) with [Spotify](https://open.spotify.com/) for 3rd party API
+* Deployed with [heroku](https://www.heroku.com/)
