@@ -13,11 +13,16 @@ const Login = ({ setUser, toggleAuthenticated }) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const payload = await LoginUser(formValues)
-    setFormValues({ username: '', password: '' })
-    setUser(payload)
-    toggleAuthenticated(true)
-    navigate('/')
+    if (payload.msg) {
+      swal("User login failed!")
+    } else {
+      setFormValues({ username: '', password: '' })
+      setUser(payload.user)
+      toggleAuthenticated(true)
+      navigate('/')
+    }
   }
+
   return (
     <div className="loginCard">
       <p className="loginHeader">LOGIN</p>
