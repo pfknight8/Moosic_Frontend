@@ -58,6 +58,13 @@ function App() {
     setUser(user)
     toggleAuthenticated(true)
   }
+
+  useEffect(() => {
+    if (authenticated) {
+      handleUserPlaylists(user)
+    }
+  }, [user])
+
   useEffect(() => {
     const token = localStorage.getItem('token')
     if (token && user) {
