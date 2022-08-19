@@ -14,7 +14,7 @@ const Login = ({ setUser, toggleAuthenticated }) => {
     e.preventDefault()
     const payload = await LoginUser(formValues)
     if (payload.msg) {
-      swal('Username or password are incorrect')
+      swal('Username or password are incorrect', 'Click OK to return!', 'error')
     } else {
       setFormValues({ username: '', password: '' })
       setUser(payload.user)
