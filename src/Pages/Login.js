@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { LoginUser } from '../services/Auth'
-
+import swal from 'sweetalert'
 const Login = ({ setUser, toggleAuthenticated }) => {
   const [formValues, setFormValues] = useState({ username: '', password: '' })
   const navigate = useNavigate()
@@ -14,7 +14,7 @@ const Login = ({ setUser, toggleAuthenticated }) => {
     e.preventDefault()
     const payload = await LoginUser(formValues)
     if (payload.msg) {
-      swal("User login failed!")
+      swal('User login failed!')
     } else {
       setFormValues({ username: '', password: '' })
       setUser(payload.user)
