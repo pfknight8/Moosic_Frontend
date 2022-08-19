@@ -21,12 +21,7 @@ const PlaylistSongDetails = ({
     let response = await Client.delete(
       `${BASE_URL}/api/playlist/addsong/${playlist_id}/${song_id}`
     )
-    if (!response.data.message) {
-      // alert(`Database Error!`)
-      swal('Database Error!', 'Click OK to return!', 'warning')
-    } else {
-      alert(response.data.message)
-    }
+    swal(response.data.message, 'Click OK to return!', 'warning')
     navigate(`/profile`)
   }
 
