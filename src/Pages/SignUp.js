@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { SignUpUser } from '../services/Auth'
+import swal from 'sweetalert'
 
 const SignUp = () => {
   const initialFormValues = {
@@ -24,7 +25,8 @@ const SignUp = () => {
     }
     let res = await SignUpUser(dataSend)
     if (res.msg) {
-      alert("User already exists!")
+      // alert("User already exists!")
+      swal('User already exists!', 'Click OK to return!', 'error')
     } else {
       setFormValues(initialFormValues)
       navigate('/userLogin')

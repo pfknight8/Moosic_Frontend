@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import Client, { BASE_URL } from '../services/api'
+import swal from 'sweetalert'
 
 const PlaylistSongDetails = ({
   selectedPlaylist,
@@ -9,9 +10,8 @@ const PlaylistSongDetails = ({
   user,
   authenticated
 }) => {
-
   const navigate = useNavigate()
-  
+
   const handleBackToPlaylist = (PL) => {
     setUserPLSong(null)
     navigate(`/profile/playlist/${PL.id}`)
@@ -22,7 +22,8 @@ const PlaylistSongDetails = ({
       `${BASE_URL}/api/playlist/addsong/${playlist_id}/${song_id}`
     )
     if (!response.data.message) {
-      alert(`Database Error!`)
+      // alert(`Database Error!`)
+      swal('Database Error!', 'Click OK to return!', 'warning')
     } else {
       alert(response.data.message)
     }
