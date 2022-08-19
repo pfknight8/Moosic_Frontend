@@ -40,9 +40,13 @@ Moosic, a music app where users are able to browse for songs as well as create p
 ### **_Screenshots_**
 
 #### Component Hierarchy Diagram
+
 <img alt="component hierarchy diagram" width='500' src="./public/Moosic_CHD.png" />
 
- Some SS from our project will go here along with any other images we may want to use.
+#### Selected views of our website
+
+<img alt="screenshot of app" width='500' src="./public/Moosic_Profile.png" />
+
 
 ---
 ### **_Getting Started_**
@@ -60,9 +64,10 @@ Moosic, a music app where users are able to browse for songs as well as create p
 
 - [x] ~~Authentication required to view certain content~~
 - [x] ~~Use a 3rd party API to get songs~~
+- [ ] Optimize for mobile experience
 - [ ] Users can rate songs
 - [ ] Users can find and connect to other users
-- [ ] User can post messages to each other/a forum
+- [ ] User can post messages to each other/in a forum
 
 ---
 

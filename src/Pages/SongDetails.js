@@ -44,14 +44,12 @@ const SongDetails = ({
       `${BASE_URL}/api/playlist/addsong/${playlist_id}/${song_id}`
     )
     if (!response.data.message) {
-      // alert(`song added!`)
       swal(
         'Song has been successfully added to playlist!',
         'Click OK to return!',
         'success'
       )
     } else {
-      // alert(response.data.message)
       swal(
         'Song Already Added!',
         'This song is already in that playlist!',
