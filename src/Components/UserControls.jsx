@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import Client, { BASE_URL } from '../services/api'
 import { useNavigate } from 'react-router-dom'
+import swal from 'sweetalert'
 
 export default function Edit({ user, LogOut }) {
   const [newUsername, setNewUsername] = useState(user.username)
@@ -39,7 +40,8 @@ export default function Edit({ user, LogOut }) {
         oldPassword: oldPassword
       })
     } else {
-      alert('Error"! New password does not match confirm!')
+      // alert('Error"! New password does not match confirm!')
+      swal("Error! New password does not match", "Click OK to return!", "error");
     }
   }
 
@@ -56,7 +58,8 @@ export default function Edit({ user, LogOut }) {
         toggleEditPassword(!editPassword)
         break
       default:
-        alert('Something went very wrong!')
+        // alert('Something went very wrong!')
+        swal("Something went very wrong!", "Click OK to return!", "warning");
     }
   }
 
