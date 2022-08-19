@@ -62,7 +62,7 @@ export default function Edit({ user, LogOut }) {
         swal("Something went very wrong!", "Click OK to return!", "warning");
     }
   }
-
+  
   const deleteAccount = async () => {
     const res = await Client.delete(`${BASE_URL}/api/user/${user.id}`, {
       data: {
@@ -70,29 +70,39 @@ export default function Edit({ user, LogOut }) {
         password: oldPassword
       }
     })
-    // alert(res.data.message)
-
+    swal("Success! Account has been deleted!", {
+      icon: "success",
+    });
+    LogOut()
+    navigate('/')
+  }
+  
+  const handleDeleteClick = () => {
     swal({
       title: "Are you sure?",
       text: "Once deleted, you will not be able to recover this account!",
       icon: "warning",
-      buttons: true,
       dangerMode: true,
+      buttons: {
+        decline: {
+          text: "Oops, Cancel!",
+          value: false
+        },
+        accept: {
+          text: "Yes, Delete!",
+          value: true
+        },
+      }
     })
-    .then((willDelete) => {
-      if (willDelete) {
-        swal("Success! Account has been deleted!", {
-          icon: "success",
-        });
+    .then((value) => {
+      if (value) {
+        deleteAccount()
       } else {
-        swal("Click OK to return!");
+        swal("Delete Canceled! Click OK to continue.");
       }
     });
-
-    LogOut()
-    navigate('/')
   }
-
+  
   return (
     <div className="editInfo">
       <div id="usernameUpdateForm">
@@ -233,7 +243,7 @@ export default function Edit({ user, LogOut }) {
             <button
               className="buttonZ"
               disabled={!oldPassword}
-              onClick={deleteAccount}
+              onClick={handleDeleteClick}
             >
               Yes, Delete Account
             </button>
