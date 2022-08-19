@@ -9,7 +9,6 @@ const SongSearch = ({
   handleSongSelect,
   setSelectedPlaylist
 }) => {
-  
   const [search, setSearch] = useState('')
   const [searchResults, setSearchResults] = useState(null)
 
@@ -20,8 +19,8 @@ const SongSearch = ({
       q: `${search}`,
       type: 'multi',
       offset: '0',
-      limit: '9',
-      numberOfTopResults: '5'
+      limit: '21',
+      numberOfTopResults: '9'
     },
     headers: {
       'X-RapidAPI-Key': '23ff26e990msh4c310288556d19ap115d19jsnb0dedeb0f45c',
