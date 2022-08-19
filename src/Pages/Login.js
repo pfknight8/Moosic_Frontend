@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import { LoginUser } from '../services/Auth'
 import swal from 'sweetalert'
+
 const Login = ({ setUser, toggleAuthenticated }) => {
   const [formValues, setFormValues] = useState({ username: '', password: '' })
   const navigate = useNavigate()
