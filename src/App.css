@@ -2,8 +2,6 @@
 
 .App {
   text-align: center;
-  width: 100vw;
-  height: 100vh;
   font-family: 'Aboreto', cursive;
   font-weight: bold;
 }
@@ -12,10 +10,11 @@ header {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
+  width: 0vw;
 }
 
 .footer {
-  width: 100vw;
+  width: 95vw;
 }
 
 .title {
@@ -74,7 +73,7 @@ nav {
 .nav {
   display: flex;
   justify-content: flex-end;
-  width: 93vw;
+  width: 88vw;
   height: 9vh;
 }
 

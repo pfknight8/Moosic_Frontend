@@ -40,7 +40,6 @@ export default function Edit({ user, LogOut }) {
         oldPassword: oldPassword
       })
     } else {
-      // alert('Error"! New password does not match confirm!')
       swal("Error! New password does not match", "Click OK to return!", "error");
     }
   }
@@ -58,7 +57,6 @@ export default function Edit({ user, LogOut }) {
         toggleEditPassword(!editPassword)
         break
       default:
-        // alert('Something went very wrong!')
         swal("Something went very wrong!", "Click OK to return!", "warning");
     }
   }
