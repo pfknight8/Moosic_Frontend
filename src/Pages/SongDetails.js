@@ -51,7 +51,12 @@ const SongDetails = ({
         'success'
       )
     } else {
-      alert(response.data.message)
+      // alert(response.data.message)
+      swal(
+        'Song Already Added!',
+        'This song is already in that playlist!',
+        'warning'
+      )
     }
   }
 

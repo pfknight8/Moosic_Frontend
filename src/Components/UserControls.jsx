@@ -70,7 +70,25 @@ export default function Edit({ user, LogOut }) {
         password: oldPassword
       }
     })
-    alert(res.data.message)
+    // alert(res.data.message)
+
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, you will not be able to recover this account!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+    .then((willDelete) => {
+      if (willDelete) {
+        swal("Success! Account has been deleted!", {
+          icon: "success",
+        });
+      } else {
+        swal("Click OK to return!");
+      }
+    });
+
     LogOut()
     navigate('/')
   }
